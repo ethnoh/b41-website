@@ -22,16 +22,6 @@ export default function Hero() {
         />
       </div>
 
-      {/* BRAIN */}
-      <div className="flex items-center justify-center mt-10">
-        <Image
-          src="/assets/visuals/brain.png"
-          alt="Brain"
-          width={525}   // ← Увеличенный мозг
-          height={525}
-          className="animate-pulse-slow opacity-90"
-        />
-      </div>
 
       {/* PYRAMID TEXT */}
       <div className="text-center mt-6">
