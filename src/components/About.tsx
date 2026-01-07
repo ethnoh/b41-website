@@ -1,35 +1,77 @@
-import FadeOverlay from "./FadeOverlay";
-
 export default function About() {
-  const people = [
-    { name: "Aleksandrs Gnedovs", role: "Business Development" },
-    { name: "Edgars Jubelis", role: "AI Development Specialist" },
-    { name: "Zinovi Lipinski", role: "IT Specialist" },
+  const team = [
+    {
+      name: "Edgars Jubelis",
+      role: "AI Development Specialist",
+      image: "/assets/team/edgars.png",
+    },
+    {
+      name: "Zinovi Lipinski",
+      role: "IT Specialist",
+      image: "/assets/team/zinoviy.png",
+    },
   ];
+
+  // 🔧 CONTROL — crop top of background image (px)
+  const TOP_CROP_PX = 40;
 
   return (
     <section
       id="about"
-      className="relative min-h-[110vh] w-full bg-cover bg-center text-white flex items-center"
-      style={{ backgroundImage: 'url(/assets/backgrounds/about.png)' }}
+      className="relative w-full overflow-hidden text-white bg-black"
     >
-      <FadeOverlay />
+      {/* BACKGROUND (CROPPED FROM TOP, NO STRETCH) */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className="absolute left-0 w-full bg-no-repeat bg-top"
+          style={{
+            top: `${TOP_CROP_PX}px`,
+            height: `calc(100% + ${TOP_CROP_PX}px)`,
+            backgroundImage: "url(/assets/backgrounds/about.png)",
+            backgroundSize: "100% auto",
+          }}
+        />
+      </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto text-center">
-        <h2 className="text-5xl font-bold mb-4">Who we are</h2>
-        <p className="text-xl mb-12 opacity-80">Logistics meets AI.</p>
+      {/* STRONG TOP FADE (VISIBLE GLUE) */}
+      <div className="absolute top-0 left-0 w-full h-65 bg-gradient-to-b from-black via-black/80 to-transparent z-20 pointer-events-none" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {people.map((p, i) => (
-            <div
-              key={i}
-              className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10"
-            >
-              <div className="h-32 bg-black/20 rounded-md mb-6"></div>
-              <p className="text-2xl font-semibold">{p.name}</p>
-              <p className="opacity-80">{p.role}</p>
-            </div>
-          ))}
+      {/* BOTTOM FADE */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none" />
+
+      {/* CONTENT */}
+      <div className="relative z-30 flex justify-center pt-50 pb-60 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* TITLE */}
+          <h2 className="text-6xl font-black mb-28">
+            Who we are
+          </h2>
+
+          {/* TEAM */}
+          <div className="flex flex-col md:flex-row gap-32 justify-center items-center">
+            {team.map((p, i) => (
+              <div key={i} className="text-center">
+                {/* PHOTO WITH NEON */}
+                <div className="neon-avatar mb-10 mx-auto">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    className="w-56 h-56 object-cover rounded-full relative z-10"
+                  />
+                </div>
+
+                {/* NAME */}
+                <p className="text-2xl font-semibold">
+                  {p.name}
+                </p>
+
+                {/* ROLE */}
+                <p className="opacity-80 text-lg mt-2">
+                  {p.role}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

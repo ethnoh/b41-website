@@ -1,34 +1,92 @@
-import FadeOverlay from "./FadeOverlay";
-
 export default function Clients() {
   const logos = [
-    "/assets/logos/logo-conway.png",
-    "/assets/logos/logo-speedit.png",
-    "/assets/logos/logo-latflex.png",
+    {
+      src: "/assets/logos/logo-conway.png",
+      href: "https://conwaycs.com/",
+      alt: "Conway Container Solutions",
+    },
+    {
+      src: "/assets/logos/logo-speedit.png",
+      href: "https://eqspro.global/",
+      alt: "Speed-IT / EQSPro",
+    },
+    {
+      src: "/assets/logos/logo-latflex.png",
+      href: "https://latflex.com/",
+      alt: "Latflex Logistics",
+    },
   ];
+
+  // 🔧 CONTROL — crop top of background image (px)
+  const TOP_CROP_PX = 20;
 
   return (
     <section
       id="clients"
-      className="relative min-h-[50vh] w-full bg-cover bg-center flex items-center justify-center text-white"
-      style={{ backgroundImage: 'url(/assets/backgrounds/clients.png)' }}
+      className="relative w-full overflow-hidden text-white bg-black"
     >
-      <FadeOverlay />
+      {/* BACKGROUND (CROPPED FROM TOP, NO STRETCH) */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className="absolute left-0 w-full bg-no-repeat bg-top"
+          style={{
+            top: `${TOP_CROP_PX}px`,
+            height: `calc(100% + ${TOP_CROP_PX}px)`,
+            backgroundImage: "url(/assets/backgrounds/clients.png)",
+            backgroundSize: "100% auto", // ❗ НЕ РАСТЯГИВАЕМ
+          }}
+        />
+      </div>
 
-      <div className="relative z-10 text-center">
-        <h2 className="text-5xl font-bold mb-4">Trusted by</h2>
-        <p className="text-xl mb-12 opacity-80">
-          Companies who rely on our expertise.
-        </p>
+      {/* TOP FADE (BENEFITS → CLIENTS) */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
 
-        <div className="flex gap-16 justify-center items-center opacity-80">
-          {logos.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              className="h-20 w-auto hover:scale-110 hover:opacity-100 transition-all duration-300 drop-shadow-lg"
-            />
-          ))}
+      {/* BOTTOM FADE (CLIENTS → NEXT SECTION) */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
+
+      {/* CONTENT */}
+      <div className="relative z-20 flex justify-center pt-0 pb-100 px-50">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* TITLE */}
+          <h2 className="text-6xl font-black mb-6">
+            Trusted by
+          </h2>
+
+          {/* SUBTITLE */}
+          <p className="text-2xl opacity-85 mb-20">
+            Companies who rely on our expertise.
+          </p>
+
+          {/* LOGOS */}
+          <div className="flex flex-wrap gap-20 justify-center items-center">
+            {logos.map((logo, i) => (
+              <a
+                key={i}
+                href={logo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  opacity-80
+                  transition-all
+                  duration-300
+                  hover:opacity-100
+                  hover:scale-110
+                  cursor-pointer
+                "
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="
+                    h-20
+                    w-auto
+                    drop-shadow-[0_0_20px_rgba(0,255,255,0.25)]
+                    select-none
+                  "
+                />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

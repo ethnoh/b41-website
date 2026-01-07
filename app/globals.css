@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* ===============================
+   BASE THEME
+================================ */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -25,12 +29,126 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes pulse-slow {
-  0% { transform: scale(1); opacity: 0.85; }
-  50% { transform: scale(1.03); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.85; }
+/* ===============================
+   CINEMATIC TEXT PLATE
+================================ */
+
+.text-plate {
+  position: relative;
+  display: inline-block;
+  padding: 0.4em 0.8em;
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow 4s ease-in-out infinite;
+/* Чёрный эллипс под текстом */
+.text-plate::before {
+  content: "";
+  position: absolute;
+  inset: -65% -90%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.85) 30%,
+    rgba(0, 0, 0, 0.55) 55%,
+    rgba(0, 0, 0, 0.25) 70%,
+    rgba(0, 0, 0, 0.0) 85%
+  );
+  filter: blur(10px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Сам текст */
+.neon-outline {
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(0, 220, 255, 0.55),
+    0 0 18px rgba(0, 200, 255, 0.45),
+    0 0 36px rgba(0, 180, 255, 0.35);
+  animation: neon-pulse 3.2s ease-in-out infinite;
+}
+
+/* Пульсация строго по контуру букв */
+@keyframes neon-pulse {
+  0% {
+    text-shadow:
+      0 0 6px rgba(0, 200, 255, 0.45),
+      0 0 14px rgba(0, 180, 255, 0.35),
+      0 0 28px rgba(0, 160, 255, 0.25);
+  }
+  50% {
+    text-shadow:
+      0 0 14px rgba(0, 240, 255, 0.75),
+      0 0 34px rgba(0, 220, 255, 0.55),
+      0 0 68px rgba(0, 200, 255, 0.45);
+  }
+
+  100% {
+    text-shadow:
+      0 0 6px rgba(0, 200, 255, 0.45),
+      0 0 14px rgba(0, 180, 255, 0.35),
+      0 0 28px rgba(0, 160, 255, 0.25);
+  }
+}
+
+/* ===============================
+   NEON AVATAR (ABOUT SECTION)
+================================ */
+
+.neon-avatar {
+  position: relative;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Local darkening under photo (keeps background alive) */
+.neon-avatar::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.4) 45%,
+    transparent 75%
+  );
+  filter: blur(8px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Neon contour pulse */
+.neon-avatar::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 9999px;
+  box-shadow:
+    0 0 18px rgba(0, 220, 255, 0.35),
+    0 0 36px rgba(0, 200, 255, 0.25);
+  animation: neon-avatar-pulse 4s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes neon-avatar-pulse {
+  0% {
+    box-shadow:
+      0 0 14px rgba(0, 200, 255, 0.25),
+      0 0 28px rgba(0, 180, 255, 0.18);
+  }
+  50% {
+    box-shadow:
+      0 0 28px rgba(0, 240, 255, 0.55),
+      0 0 56px rgba(0, 220, 255, 0.45);
+  }
+  100% {
+    box-shadow:
+      0 0 14px rgba(0, 200, 255, 0.25),
+      0 0 28px rgba(0, 180, 255, 0.18);
+  }
 }
