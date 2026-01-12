@@ -13,8 +13,8 @@ export default function Services() {
         className="
           relative w-full overflow-hidden
 
-          /* MOBILE */
-          min-h-[120vh]
+          /* ❗ MOBILE — NO FORCED HEIGHT */
+          min-h-0
 
           /* DESKTOP */
           lg:min-h-0
@@ -40,10 +40,10 @@ export default function Services() {
         {/* GLOBAL DARKENING */}
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
-        {/* TOP FADE — MOBILE (VERY SOFT) */}
+        {/* TOP FADE — MOBILE */}
         <div className="absolute top-0 left-0 w-full h-[35vh] bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none lg:hidden" />
 
-        {/* TOP FADE — DESKTOP (UNCHANGED) */}
+        {/* TOP FADE — DESKTOP */}
         <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent pointer-events-none hidden lg:block" />
 
         {/* CONTENT */}
@@ -86,7 +86,7 @@ export default function Services() {
               className="
                 grid place-items-center
 
-                /* MOBILE — 2x2 GRID */
+                /* MOBILE */
                 grid-cols-2
                 gap-y-14
                 gap-x-10
