@@ -13,10 +13,10 @@ export default function Services() {
         className="
           relative w-full overflow-hidden
 
-          /* ❗ MOBILE — NO FORCED HEIGHT */
-          min-h-0
+          /* MOBILE: give background space so overlay content stays on it */
+          min-h-[100svh]
 
-          /* DESKTOP */
+          /* DESKTOP: unchanged */
           lg:min-h-0
         "
       >
@@ -49,14 +49,15 @@ export default function Services() {
         {/* CONTENT */}
         <div
           className="
-            relative z-10
+            z-10
             flex justify-center
             px-6
 
-            /* MOBILE */
-            pt-20
+            /* MOBILE: overlay on background */
+            absolute inset-0
+            pt-16
 
-            /* DESKTOP */
+            /* DESKTOP: EXACTLY as before */
             lg:absolute
             lg:inset-0
             lg:pt-28
@@ -69,9 +70,9 @@ export default function Services() {
                 font-black tracking-tight text-center
 
                 /* MOBILE */
-                text-[clamp(40px,9vw,52px)]
+                text-[clamp(36px,8.5vw,52px)]
                 leading-[0.95]
-                mb-14
+                mb-10
 
                 /* DESKTOP */
                 lg:text-6xl
@@ -88,8 +89,8 @@ export default function Services() {
 
                 /* MOBILE */
                 grid-cols-2
-                gap-y-14
-                gap-x-10
+                gap-y-8
+                gap-x-8
 
                 /* DESKTOP */
                 md:grid-cols-2
@@ -104,7 +105,7 @@ export default function Services() {
                       neon-outline font-black tracking-tight text-center
 
                       /* MOBILE */
-                      text-lg
+                      text-base
                       leading-tight
 
                       /* DESKTOP */
