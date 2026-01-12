@@ -24,13 +24,13 @@ export default function Services() {
           "
         />
 
-        {/* GLOBAL DARKENING */}
+        {/* GLOBAL DARKENING — DESKTOP ETALON */}
         <div className="absolute inset-0 bg-black/45 pointer-events-none" />
 
-        {/* TOP FADE */}
+        {/* TOP FADE — DESKTOP ETALON */}
         <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent pointer-events-none" />
 
-        {/* CONTENT */}
+        {/* CONTENT — SAME OVERLAY, MOBILE SAFE */}
         <div
           className="
             absolute inset-0 z-10
@@ -38,10 +38,10 @@ export default function Services() {
             px-6
 
             /* MOBILE */
-            pt-24
+            pt-20 pb-40
 
             /* DESKTOP */
-            lg:pt-28
+            lg:pt-28 lg:pb-0
           "
         >
           <div className="max-w-6xl mx-auto text-center w-full">
@@ -51,9 +51,9 @@ export default function Services() {
                 font-black tracking-tight text-center
 
                 /* MOBILE */
-                text-[clamp(42px,10vw,56px)]
-                leading-[0.95]
-                mb-16
+                text-[clamp(40px,9vw,54px)]
+                leading-[1]
+                mb-12
 
                 /* DESKTOP */
                 lg:text-6xl
@@ -70,7 +70,7 @@ export default function Services() {
 
                 /* MOBILE */
                 grid-cols-1
-                gap-y-12
+                gap-y-10
 
                 /* DESKTOP */
                 md:grid-cols-2
@@ -85,7 +85,7 @@ export default function Services() {
                       neon-outline font-black tracking-tight
 
                       /* MOBILE */
-                      text-xl
+                      text-lg
                       whitespace-normal
 
                       /* DESKTOP */
