@@ -8,14 +8,25 @@ export default function Services() {
 
   return (
     <section id="services" className="relative w-full text-white">
-      <div className="relative w-full overflow-hidden">
+      {/* WRAPPER — DEFINES HEIGHT */}
+      <div
+        className="
+          relative w-full overflow-hidden
+
+          /* MOBILE */
+          min-h-[120vh]
+
+          /* DESKTOP */
+          lg:min-h-0
+        "
+      >
         {/* BACKGROUND IMAGE */}
         <img
           src="/assets/backgrounds/services.png"
           alt=""
           className="
             w-full
-            h-auto
+            h-full
             object-cover
             object-top
             pointer-events-none
@@ -29,8 +40,8 @@ export default function Services() {
         {/* GLOBAL DARKENING */}
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
-        {/* TOP FADE — MOBILE (LONG & SOFT) */}
-        <div className="absolute top-0 left-0 w-full h-[60vh] bg-gradient-to-b from-black via-black/70 to-transparent pointer-events-none lg:hidden" />
+        {/* TOP FADE — MOBILE (VERY SOFT) */}
+        <div className="absolute top-0 left-0 w-full h-[35vh] bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none lg:hidden" />
 
         {/* TOP FADE — DESKTOP (UNCHANGED) */}
         <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent pointer-events-none hidden lg:block" />
@@ -38,14 +49,16 @@ export default function Services() {
         {/* CONTENT */}
         <div
           className="
-            absolute inset-0 z-10
+            relative z-10
             flex justify-center
             px-6
 
             /* MOBILE */
-            pt-16
+            pt-20
 
             /* DESKTOP */
+            lg:absolute
+            lg:inset-0
             lg:pt-28
           "
         >
@@ -58,7 +71,7 @@ export default function Services() {
                 /* MOBILE */
                 text-[clamp(40px,9vw,52px)]
                 leading-[0.95]
-                mb-12
+                mb-14
 
                 /* DESKTOP */
                 lg:text-6xl
@@ -75,8 +88,8 @@ export default function Services() {
 
                 /* MOBILE — 2x2 GRID */
                 grid-cols-2
-                gap-y-10
-                gap-x-8
+                gap-y-14
+                gap-x-10
 
                 /* DESKTOP */
                 md:grid-cols-2
