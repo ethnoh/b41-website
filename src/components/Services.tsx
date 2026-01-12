@@ -8,71 +8,66 @@ export default function Services() {
 
   return (
     <section id="services" className="relative w-full text-white">
-      {/* WRAPPER — DEFINES HEIGHT */}
+      {/* WRAPPER */}
       <div
         className="
           relative w-full overflow-hidden
 
-          /* MOBILE: give background space so overlay content stays on it */
+          /* MOBILE */
           min-h-[100svh]
 
-          /* DESKTOP: unchanged */
+          /* DESKTOP */
           lg:min-h-0
         "
       >
-        {/* BACKGROUND IMAGE */}
+        {/* BACKGROUND — MOBILE (ABSOLUTE REAL BACKGROUND) */}
         <img
           src="/assets/backgrounds/services.png"
           alt=""
           className="
-            w-full
-            h-full
-            object-cover
-            object-top
-            pointer-events-none
-            select-none
+            absolute inset-0
+            w-full h-full
+            object-cover object-top
+            pointer-events-none select-none
 
-            /* DESKTOP ONLY CROP */
+            /* DESKTOP */
+            lg:static
+            lg:w-full lg:h-auto
             lg:-mt-[50px]
           "
         />
 
-        {/* GLOBAL DARKENING */}
+        {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
-        {/* TOP FADE — MOBILE */}
+        {/* TOP FADE */}
         <div className="absolute top-0 left-0 w-full h-[35vh] bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none lg:hidden" />
-
-        {/* TOP FADE — DESKTOP */}
         <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent pointer-events-none hidden lg:block" />
 
         {/* CONTENT */}
         <div
           className="
-            z-10
+            relative z-10
             flex justify-center
-            px-6
+            px-5
 
-            /* MOBILE: overlay on background */
-            absolute inset-0
-            pt-16
+            /* MOBILE */
+            pt-14
 
-            /* DESKTOP: EXACTLY as before */
-            lg:absolute
-            lg:inset-0
-            lg:pt-28
+            /* DESKTOP */
+            lg:absolute lg:inset-0 lg:pt-28
           "
         >
           <div className="max-w-6xl mx-auto text-center w-full">
             {/* TITLE */}
             <h2
               className="
-                font-black tracking-tight text-center
+                font-black tracking-tight
 
                 /* MOBILE */
-                text-[clamp(36px,8.5vw,52px)]
+                text-[clamp(34px,8vw,48px)]
                 leading-[0.95]
-                mb-10
+                mb-8
 
                 /* DESKTOP */
                 lg:text-6xl
@@ -85,27 +80,23 @@ export default function Services() {
             {/* ITEMS */}
             <div
               className="
-                grid place-items-center
-
-                /* MOBILE */
-                grid-cols-2
-                gap-y-8
-                gap-x-8
+                grid grid-cols-2
+                gap-x-6
+                gap-y-6
 
                 /* DESKTOP */
-                md:grid-cols-2
-                md:gap-y-20
                 md:gap-x-32
+                md:gap-y-20
               "
             >
               {items.map((item) => (
                 <div key={item} className="text-plate">
                   <span
                     className="
-                      neon-outline font-black tracking-tight text-center
+                      neon-outline font-black text-center
 
                       /* MOBILE */
-                      text-base
+                      text-[14px]
                       leading-tight
 
                       /* DESKTOP */
