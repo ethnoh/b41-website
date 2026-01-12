@@ -12,32 +12,40 @@ export default function About() {
     },
   ];
 
-  // 🔧 CONTROL — crop top of background image (px)
-  const TOP_CROP_PX = 40;
-
   return (
     <section
       id="about"
       className="relative w-full overflow-hidden text-white bg-black"
     >
-      {/* BACKGROUND (CROPPED FROM TOP, NO STRETCH) */}
+      {/* BACKGROUND */}
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="absolute left-0 w-full bg-no-repeat bg-top"
+          className="absolute inset-0 bg-no-repeat bg-top"
           style={{
-            top: `${TOP_CROP_PX}px`,
-            height: `calc(100% + ${TOP_CROP_PX}px)`,
             backgroundImage: "url(/assets/backgrounds/about.png)",
-            backgroundSize: "100% auto",
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
           }}
         />
       </div>
 
-      {/* STRONG TOP FADE (VISIBLE GLUE) */}
-      <div className="absolute top-0 left-0 w-full h-65 bg-gradient-to-b from-black via-black/80 to-transparent z-20 pointer-events-none" />
+      {/* TOP FADE (PROJECTS → ABOUT) */}
+      <div
+        className="absolute top-0 left-0 w-full h-56 z-20 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.6) 55%, rgba(0,0,0,0) 100%)",
+        }}
+      />
 
-      {/* BOTTOM FADE */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none" />
+      {/* BOTTOM FADE (ABOUT → PROCESS) */}
+      <div
+        className="absolute bottom-0 left-0 w-full h-56 z-20 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 35%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 100%)",
+        }}
+      />
 
       {/* CONTENT */}
       <div className="relative z-30 flex justify-center pt-50 pb-60 px-6">

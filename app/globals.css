@@ -152,3 +152,66 @@ body {
       0 0 28px rgba(0, 180, 255, 0.18);
   }
 }
+
+/* === CUSTOM SCROLLBAR (b41.ai FINAL) === */
+.modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(16,120,110,0.75) transparent;
+  overscroll-behavior: contain;
+}
+
+/* Webkit */
+.modal-scroll::-webkit-scrollbar {
+  width: 12px; /* толще */
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.0) 0%,
+      rgba(16,120,110,0.25) 25%,
+      rgba(16,120,110,0.75) 50%,
+      rgba(10,80,75,0.95) 75%,
+      rgba(0,0,0,0.0) 100%
+    );
+  border-radius: 999px;
+  border: 3px solid rgba(0,0,0,0.55);
+
+  /* 🎩 ВОТ ЭТО ДЕЛАЕТ “КОЛБАСОЧКУ” */
+  box-shadow:
+    inset 0 0 6px rgba(0,0,0,0.6),
+    inset 0 0 14px rgba(0,0,0,0.45);
+}
+
+
+/* Thumb — darker, cinematic, no arrows */
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(16,120,110,0.15) 0%,
+    rgba(16,120,110,0.45) 45%,
+    rgba(10,80,75,0.85) 100%
+  );
+  border-radius: 12px;
+  border: 2px solid rgba(0,0,0,0.35);
+}
+
+/* Hover — subtle, not flashy */
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(18,140,130,0.35) 0%,
+    rgba(18,140,130,0.6) 45%,
+    rgba(10,90,85,0.9) 100%
+  );
+}
+
+/* ❌ REMOVE ARROWS COMPLETELY */
+.modal-scroll::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+

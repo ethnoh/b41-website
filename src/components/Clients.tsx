@@ -41,8 +41,22 @@ export default function Clients() {
       {/* TOP FADE (BENEFITS → CLIENTS) */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
 
-      {/* BOTTOM FADE (CLIENTS → NEXT SECTION) */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
+      {/* BOTTOM FADE (CLIENTS → PROJECTS) */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          w-full
+          h-48
+          z-10
+          pointer-events-none
+        "
+      style={{
+        background: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0) 100%)",
+      }}
+      />
+
 
       {/* CONTENT */}
       <div className="relative z-20 flex justify-center pt-0 pb-100 px-50">
