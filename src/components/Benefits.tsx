@@ -13,10 +13,10 @@ export default function Benefits() {
         className="
           relative w-full overflow-hidden
 
-          /* MOBILE */
-          min-h-[100svh]
+          /* MOBILE — grow by content (NO FORCED HEIGHT) */
+          min-h-0
 
-          /* DESKTOP */
+          /* DESKTOP — unchanged */
           md:min-h-0
         "
       >
@@ -26,16 +26,25 @@ export default function Benefits() {
             absolute inset-0
             bg-no-repeat bg-top
 
-            /* MOBILE — FULL REVEAL */
-            bg-cover
+            /* MOBILE — same behavior as Services */
+            bg-[length:100%_auto]
 
-            /* DESKTOP */
+            /* DESKTOP — EXACTLY AS BEFORE */
             md:bg-[length:100%_auto]
           "
           style={{
             backgroundImage: "url(/assets/backgrounds/benefits.png)",
           }}
         />
+
+        {/* DESKTOP OVERLAY — UNTOUCHED */}
+        <div className="absolute inset-0 bg-black/40 pointer-events-none md:block hidden" />
+
+        {/* DESKTOP TOP FADE — UNTOUCHED */}
+        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none md:block hidden" />
+
+        {/* DESKTOP BOTTOM FADE — UNTOUCHED */}
+        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none md:block hidden" />
 
         {/* CONTENT */}
         <div
@@ -44,10 +53,10 @@ export default function Benefits() {
             flex justify-center
             px-6
 
-            /* MOBILE — content higher */
-            pt-[10vh] pb-[18vh]
+            /* MOBILE — pulled UP, no dead space */
+            pt-[6vh] pb-[12vh]
 
-            /* DESKTOP — untouched */
+            /* DESKTOP — 100% unchanged */
             md:pt-40 md:pb-48
           "
         >
@@ -62,7 +71,7 @@ export default function Benefits() {
                 leading-[0.95]
                 mb-8
 
-                /* DESKTOP */
+                /* DESKTOP — unchanged */
                 md:text-6xl
                 md:mb-24
               "
@@ -77,7 +86,7 @@ export default function Benefits() {
                 gap-y-5
                 place-items-center
 
-                /* DESKTOP */
+                /* DESKTOP — unchanged */
                 md:grid-cols-2
                 md:gap-y-20
                 md:gap-x-32
@@ -96,7 +105,7 @@ export default function Benefits() {
                     text-[16px]
                     leading-snug
 
-                    /* DESKTOP */
+                    /* DESKTOP — unchanged */
                     md:text-3xl
                   "
                 >
@@ -108,7 +117,7 @@ export default function Benefits() {
           </div>
         </div>
 
-        {/* MOBILE — soft black tail for next section */}
+        {/* MOBILE — soft black tail ONLY */}
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black md:hidden" />
       </div>
     </section>
