@@ -13,13 +13,14 @@ export default function Services() {
         className="
           relative w-full overflow-hidden
 
-          /* MOBILE — controlled background height */
-          aspect-[3/4]
+          /* MOBILE — grow by content */
+          min-h-[100svh]
 
           /* DESKTOP */
-          lg:aspect-auto
+          lg:min-h-0
         "
       >
+
         {/* BACKGROUND */}
         <img
           src="/assets/backgrounds/services.png"
