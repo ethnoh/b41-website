@@ -13,7 +13,7 @@ export default function Benefits() {
         className="
           relative w-full overflow-hidden
 
-          /* MOBILE — grow by content */
+          /* MOBILE */
           min-h-[100svh]
 
           /* DESKTOP */
@@ -25,33 +25,29 @@ export default function Benefits() {
           className="
             absolute inset-0
             bg-no-repeat bg-top
+
+            /* MOBILE — FULL REVEAL */
+            bg-cover
+
+            /* DESKTOP */
+            md:bg-[length:100%_auto]
           "
           style={{
             backgroundImage: "url(/assets/backgrounds/benefits.png)",
-            backgroundSize: "100% auto",
           }}
         />
-
-        {/* OVERLAY (same logic as Services) */}
-        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
-
-        {/* TOP FADE — glued to Services */}
-        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
-
-        {/* BOTTOM FADE — to Clients */}
-        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
 
         {/* CONTENT */}
         <div
           className="
-            relative z-20
+            relative z-10
             flex justify-center
             px-6
 
-            /* MOBILE — pulled UP, no dead space */
-            pt-[10vh] pb-[14vh]
+            /* MOBILE — content higher */
+            pt-[10vh] pb-[18vh]
 
-            /* DESKTOP — unchanged */
+            /* DESKTOP — untouched */
             md:pt-40 md:pb-48
           "
         >
@@ -104,8 +100,6 @@ export default function Benefits() {
                     md:text-3xl
                   "
                 >
-                  {/* LOCAL DARK HALO */}
-                  <div className="absolute inset-[-18px] bg-black/55 blur-2xl rounded-full -z-10" />
                   <span className="opacity-70 mr-1">•</span>
                   {b}
                 </div>
@@ -113,6 +107,9 @@ export default function Benefits() {
             </div>
           </div>
         </div>
+
+        {/* MOBILE — soft black tail for next section */}
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black md:hidden" />
       </div>
     </section>
   );
