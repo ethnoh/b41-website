@@ -13,7 +13,7 @@ export default function Benefits() {
       id="benefits"
       className="relative w-full overflow-hidden text-white bg-black"
     >
-      {/* BACKGROUND IMAGE (NO STRETCH, NO GLOBAL DARKEN) */}
+      {/* BACKGROUND */}
       <div className="absolute inset-0 overflow-hidden">
         <div
           className="absolute left-0 w-full bg-no-repeat bg-top"
@@ -21,39 +21,80 @@ export default function Benefits() {
             top: `${TOP_CROP_PX}px`,
             height: `calc(100% + ${TOP_CROP_PX}px)`,
             backgroundImage: "url(/assets/backgrounds/benefits.png)",
-            backgroundSize: "100% auto", // 🔥 НЕ растягиваем
+            backgroundSize: "100% auto",
           }}
         />
       </div>
 
-      {/* TOP FADE (Services → Benefits) */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
+      {/* TOP FADE — glued to Services */}
+      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
 
-      {/* BOTTOM FADE (Benefits → Clients) */}
+      {/* BOTTOM FADE — to Clients */}
       <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
 
       {/* CONTENT */}
-      <div className="relative z-20 flex justify-center pt-40 pb-125 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-6xl font-black mb-24">
+      <div
+        className="
+          relative z-20 flex justify-center px-6
+
+          /* MOBILE */
+          pt-24 pb-32
+
+          /* DESKTOP */
+          md:pt-40 md:pb-48
+        "
+      >
+        <div className="max-w-6xl mx-auto text-center w-full">
+          {/* TITLE */}
+          <h2
+            className="
+              font-black tracking-tight
+
+              /* MOBILE */
+              text-[clamp(34px,8vw,48px)]
+              leading-[0.95]
+              mb-10
+
+              /* DESKTOP */
+              md:text-6xl
+              md:mb-24
+            "
+          >
             Why b41.ai
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-20 gap-x-32 place-items-center">
+          {/* BENEFITS */}
+          <div
+            className="
+              grid grid-cols-1 gap-y-6
+
+              /* DESKTOP */
+              md:grid-cols-2
+              md:gap-y-20
+              md:gap-x-32
+              place-items-center
+            "
+          >
             {benefits.map((b, i) => (
               <div
                 key={i}
                 className="
                   relative
-                  text-2xl
-                  md:text-3xl
                   font-semibold
                   tracking-wide
+                  text-center
+
+                  /* MOBILE */
+                  text-[15px]
+                  leading-snug
+
+                  /* DESKTOP */
+                  md:text-3xl
                 "
               >
-                {/* LOCAL DARK HALO (НЕ УБИВАЕТ ФОН) */}
-                <div className="absolute inset-[-24px] bg-black/55 blur-2xl rounded-full -z-10" />
-                {b}
+                {/* LOCAL DARK HALO */}
+                <div className="absolute inset-[-20px] bg-black/55 blur-2xl rounded-full -z-10" />
+                <span className="opacity-80 mr-1">•</span>{b}
               </div>
             ))}
           </div>
