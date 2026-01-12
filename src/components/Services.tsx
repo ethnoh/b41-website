@@ -8,8 +8,8 @@ export default function Services() {
 
   return (
     <section id="services" className="relative w-full text-white">
-      {/* IMAGE — DEFINES HEIGHT (NO STRETCH) */}
       <div className="relative w-full overflow-hidden">
+        {/* BACKGROUND IMAGE */}
         <img
           src="/assets/backgrounds/services.png"
           alt=""
@@ -18,19 +18,24 @@ export default function Services() {
             h-auto
             object-cover
             object-top
-            lg:-mt-[50px]   /* crop top only (desktop) */
             pointer-events-none
             select-none
+
+            /* DESKTOP ONLY CROP */
+            lg:-mt-[50px]
           "
         />
 
-        {/* GLOBAL DARKENING — DESKTOP ETALON */}
-        <div className="absolute inset-0 bg-black/45 pointer-events-none" />
+        {/* GLOBAL DARKENING */}
+        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
-        {/* TOP FADE — DESKTOP ETALON */}
-        <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent pointer-events-none" />
+        {/* TOP FADE — MOBILE (LONG & SOFT) */}
+        <div className="absolute top-0 left-0 w-full h-[60vh] bg-gradient-to-b from-black via-black/70 to-transparent pointer-events-none lg:hidden" />
 
-        {/* CONTENT — SAME OVERLAY, MOBILE SAFE */}
+        {/* TOP FADE — DESKTOP (UNCHANGED) */}
+        <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent pointer-events-none hidden lg:block" />
+
+        {/* CONTENT */}
         <div
           className="
             absolute inset-0 z-10
@@ -38,10 +43,10 @@ export default function Services() {
             px-6
 
             /* MOBILE */
-            pt-20 pb-40
+            pt-16
 
             /* DESKTOP */
-            lg:pt-28 lg:pb-0
+            lg:pt-28
           "
         >
           <div className="max-w-6xl mx-auto text-center w-full">
@@ -51,8 +56,8 @@ export default function Services() {
                 font-black tracking-tight text-center
 
                 /* MOBILE */
-                text-[clamp(40px,9vw,54px)]
-                leading-[1]
+                text-[clamp(40px,9vw,52px)]
+                leading-[0.95]
                 mb-12
 
                 /* DESKTOP */
@@ -68,9 +73,10 @@ export default function Services() {
               className="
                 grid place-items-center
 
-                /* MOBILE */
-                grid-cols-1
+                /* MOBILE — 2x2 GRID */
+                grid-cols-2
                 gap-y-10
+                gap-x-8
 
                 /* DESKTOP */
                 md:grid-cols-2
@@ -82,11 +88,11 @@ export default function Services() {
                 <div key={item} className="text-plate">
                   <span
                     className="
-                      neon-outline font-black tracking-tight
+                      neon-outline font-black tracking-tight text-center
 
                       /* MOBILE */
                       text-lg
-                      whitespace-normal
+                      leading-tight
 
                       /* DESKTOP */
                       md:text-4xl
