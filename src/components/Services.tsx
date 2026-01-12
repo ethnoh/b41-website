@@ -20,7 +20,7 @@ export default function Services() {
           lg:min-h-0
         "
       >
-        {/* BACKGROUND — MOBILE (ABSOLUTE REAL BACKGROUND) */}
+        {/* BACKGROUND */}
         <img
           src="/assets/backgrounds/services.png"
           alt=""
@@ -30,10 +30,14 @@ export default function Services() {
             object-cover object-top
             pointer-events-none select-none
 
+            /* MOBILE — slight crop */
+            -mt-[8vh]
+
             /* DESKTOP */
             lg:static
             lg:w-full
             lg:h-auto
+            lg:mt-0
             lg:-mt-[50px]
           "
         />
@@ -42,7 +46,7 @@ export default function Services() {
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
         {/* TOP FADE */}
-        <div className="absolute top-0 left-0 w-full h-[35vh] bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none lg:hidden" />
+        <div className="absolute top-0 left-0 w-full h-[30vh] bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none lg:hidden" />
         <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent pointer-events-none hidden lg:block" />
 
         {/* CONTENT */}
@@ -52,8 +56,8 @@ export default function Services() {
             flex justify-center
             px-5
 
-            /* MOBILE — SAFE OFFSET FOR REAL DEVICES */
-            pt-[22vh]
+            /* MOBILE — tuned offset */
+            pt-[16vh]
 
             /* DESKTOP */
             lg:absolute
@@ -85,7 +89,7 @@ export default function Services() {
               className="
                 grid grid-cols-2
                 gap-x-6
-                gap-y-6
+                gap-y-8
 
                 /* DESKTOP */
                 md:gap-x-32
@@ -101,7 +105,7 @@ export default function Services() {
                       text-center
 
                       /* MOBILE */
-                      text-[14px]
+                      text-[15px]
                       leading-tight
 
                       /* DESKTOP */
