@@ -32,7 +32,8 @@ export default function Services() {
 
             /* DESKTOP */
             lg:static
-            lg:w-full lg:h-auto
+            lg:w-full
+            lg:h-auto
             lg:-mt-[50px]
           "
         />
@@ -51,11 +52,13 @@ export default function Services() {
             flex justify-center
             px-5
 
-            /* MOBILE */
-            pt-14
+            /* MOBILE — SAFE OFFSET FOR REAL DEVICES */
+            pt-[22vh]
 
             /* DESKTOP */
-            lg:absolute lg:inset-0 lg:pt-28
+            lg:absolute
+            lg:inset-0
+            lg:pt-28
           "
         >
           <div className="max-w-6xl mx-auto text-center w-full">
@@ -67,7 +70,7 @@ export default function Services() {
                 /* MOBILE */
                 text-[clamp(34px,8vw,48px)]
                 leading-[0.95]
-                mb-8
+                mb-6
 
                 /* DESKTOP */
                 lg:text-6xl
@@ -93,7 +96,9 @@ export default function Services() {
                 <div key={item} className="text-plate">
                   <span
                     className="
-                      neon-outline font-black text-center
+                      neon-outline
+                      font-black
+                      text-center
 
                       /* MOBILE */
                       text-[14px]
