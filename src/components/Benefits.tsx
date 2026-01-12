@@ -6,8 +6,6 @@ export default function Benefits() {
     "Scale operations instantly",
   ];
 
-  const TOP_CROP_PX = 0;
-
   return (
     <section
       id="benefits"
@@ -18,10 +16,9 @@ export default function Benefits() {
         <div
           className="absolute left-0 w-full bg-no-repeat bg-top"
           style={{
-            top: `${TOP_CROP_PX}px`,
-            height: `calc(100% + ${TOP_CROP_PX}px)`,
             backgroundImage: "url(/assets/backgrounds/benefits.png)",
             backgroundSize: "100% auto",
+            height: "100%",
           }}
         />
       </div>
@@ -37,10 +34,10 @@ export default function Benefits() {
         className="
           relative z-20 flex justify-center px-6
 
-          /* MOBILE */
-          pt-24 pb-32
+          /* MOBILE — pulled UP */
+          pt-[14vh] pb-[12vh]
 
-          /* DESKTOP */
+          /* DESKTOP — unchanged */
           md:pt-40 md:pb-48
         "
       >
@@ -51,9 +48,9 @@ export default function Benefits() {
               font-black tracking-tight
 
               /* MOBILE */
-              text-[clamp(34px,8vw,48px)]
+              text-[clamp(38px,9vw,52px)]
               leading-[0.95]
-              mb-10
+              mb-8
 
               /* DESKTOP */
               md:text-6xl
@@ -66,13 +63,13 @@ export default function Benefits() {
           {/* BENEFITS */}
           <div
             className="
-              grid grid-cols-1 gap-y-6
+              grid grid-cols-1 gap-y-5
+              place-items-center
 
               /* DESKTOP */
               md:grid-cols-2
               md:gap-y-20
               md:gap-x-32
-              place-items-center
             "
           >
             {benefits.map((b, i) => (
@@ -85,7 +82,7 @@ export default function Benefits() {
                   text-center
 
                   /* MOBILE */
-                  text-[15px]
+                  text-[16px]
                   leading-snug
 
                   /* DESKTOP */
@@ -93,8 +90,9 @@ export default function Benefits() {
                 "
               >
                 {/* LOCAL DARK HALO */}
-                <div className="absolute inset-[-20px] bg-black/55 blur-2xl rounded-full -z-10" />
-                <span className="opacity-80 mr-1">•</span>{b}
+                <div className="absolute inset-[-18px] bg-black/55 blur-2xl rounded-full -z-10" />
+                <span className="opacity-70 mr-1">•</span>
+                {b}
               </div>
             ))}
           </div>
