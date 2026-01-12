@@ -20,7 +20,6 @@ export default function Services() {
           lg:aspect-auto
         "
       >
-
         {/* BACKGROUND */}
         <img
           src="/assets/backgrounds/services.png"
@@ -72,10 +71,10 @@ export default function Services() {
               className="
                 font-black tracking-tight
 
-                /* MOBILE */
-                text-[clamp(34px,8vw,48px)]
+                /* MOBILE — slightly stronger */
+                text-[clamp(38px,9vw,52px)]
                 leading-[0.95]
-                mb-6
+                mb-8
 
                 /* DESKTOP */
                 lg:text-6xl
@@ -88,11 +87,14 @@ export default function Services() {
             {/* ITEMS */}
             <div
               className="
-                grid grid-cols-2
-                gap-x-6
-                gap-y-8
+                grid
+
+                /* MOBILE — single column */
+                grid-cols-1
+                gap-y-6
 
                 /* DESKTOP */
+                md:grid-cols-2
                 md:gap-x-32
                 md:gap-y-20
               "
@@ -105,8 +107,8 @@ export default function Services() {
                       font-black
                       text-center
 
-                      /* MOBILE */
-                      text-[15px]
+                      /* MOBILE — slightly bigger */
+                      text-[17px]
                       leading-tight
 
                       /* DESKTOP */
