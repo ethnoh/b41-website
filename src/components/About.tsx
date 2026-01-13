@@ -51,9 +51,23 @@ export default function About() {
       <div className="relative z-30 flex justify-center pt-50 pb-60 px-6">
         <div className="max-w-6xl mx-auto text-center">
           {/* TITLE */}
-          <h2 className="text-6xl font-black mb-28">
+          <h2
+            className="
+              font-black tracking-tight
+
+              /* MOBILE */
+              text-[clamp(38px,9vw,52px)]
+              leading-[0.95]
+              mb-12
+
+              /* DESKTOP */
+              md:text-6xl
+              md:mb-28
+            "
+          >
             Who we are
           </h2>
+
 
           {/* TEAM */}
           <div className="flex flex-col md:flex-row gap-32 justify-center items-center">
