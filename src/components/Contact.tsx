@@ -6,7 +6,8 @@ import ContactModal from "./ContactModal";
 export default function Contact() {
   const [open, setOpen] = useState(false);
 
-  const CONTENT_PT = "pt-32 md:pt-44";
+  // MOBILE pushed down harder, desktop untouched
+  const CONTENT_PT = "pt-44 md:pt-44";
   const CONTENT_PB = "pb-32 md:pb-72";
 
   return (
@@ -50,7 +51,7 @@ export default function Contact() {
               font-black tracking-tight
               text-[clamp(36px,8.5vw,48px)]
               leading-[0.95]
-              mb-8
+              mb-10
               md:text-6xl
               md:mb-14
             "
@@ -58,7 +59,8 @@ export default function Contact() {
             Ready to automate your logistics?
           </h2>
 
-          <div className="mt-10 md:mt-0 md:translate-y-67">
+          {/* CTA */}
+          <div className="mt-20 md:mt-0 md:translate-y-67">
             <button
               onClick={() => setOpen(true)}
               className="
