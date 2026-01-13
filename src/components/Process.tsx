@@ -74,7 +74,7 @@ export default function Process() {
       {/* ========================= */}
       {/* ===== MOBILE ONLY ======= */}
       {/* ========================= */}
-      <div className="relative z-20 md:hidden flex justify-center pt-14 pb-32 px-6">
+      <div className="relative z-20 md:hidden flex justify-center pt-3 pb-22 px-6">
         <div className="max-w-md w-full text-center">
           {/* TITLE — same logic as About */}
           <h2
