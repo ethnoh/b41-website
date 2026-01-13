@@ -10,20 +10,19 @@ export default function Benefits() {
     <section id="benefits" className="relative w-full text-white">
       {/* WRAPPER */}
       <div className="relative w-full overflow-hidden">
-        {/* MOBILE — TOP BLACK GLUE */}
-        <div className="absolute top-0 left-0 w-full h-[10vh] bg-black md:hidden z-0" />
-
         {/* BACKGROUND */}
         <div
           className="
             absolute inset-0
             bg-no-repeat bg-top
 
-            /* MOBILE — zoom slightly to gain height */
-            bg-[length:120%_auto]
+            /* MOBILE — STRONG zoom to gain height */
+            bg-[length:170%_auto]
+            min-h-[120vh]
 
             /* DESKTOP — PERFECT, UNTOUCHED */
             md:bg-[length:100%_auto]
+            md:min-h-0
           "
           style={{
             backgroundImage: "url(/assets/backgrounds/benefits.png)",
@@ -109,7 +108,7 @@ export default function Benefits() {
           </div>
         </div>
 
-        {/* MOBILE — soft black tail */}
+        {/* MOBILE — soft tail (keep, but now it blends, not patches) */}
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black md:hidden" />
       </div>
     </section>
