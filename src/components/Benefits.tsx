@@ -14,13 +14,15 @@ export default function Benefits() {
         <div
           className="
             absolute inset-0
-            bg-no-repeat bg-top
+            bg-no-repeat
 
-            /* MOBILE — STRONG zoom to gain height */
-            bg-[length:170%_auto]
-            min-h-[120vh]
+            /* ================= MOBILE FIX ================= */
+            bg-[length:200%_auto]
+            bg-[position:center_22%]
+            min-h-[135vh]
 
-            /* DESKTOP — PERFECT, UNTOUCHED */
+            /* ================= DESKTOP — UNTOUCHED ================= */
+            md:bg-top
             md:bg-[length:100%_auto]
             md:min-h-0
           "
@@ -45,11 +47,13 @@ export default function Benefits() {
             flex justify-center
             px-6
 
-            /* MOBILE */
-            pt-[10vh] pb-[14vh]
+            /* ================= MOBILE ================= */
+            pt-[6vh]
+            pb-[14vh]
 
-            /* DESKTOP — UNTOUCHED */
-            md:pt-40 md:pb-48
+            /* ================= DESKTOP — UNTOUCHED ================= */
+            md:pt-40
+            md:pb-48
           "
         >
           <div className="max-w-6xl mx-auto text-center w-full">
@@ -108,7 +112,7 @@ export default function Benefits() {
           </div>
         </div>
 
-        {/* MOBILE — soft tail (keep, but now it blends, not patches) */}
+        {/* MOBILE — SOFT BOTTOM BLEND */}
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black md:hidden" />
       </div>
     </section>
