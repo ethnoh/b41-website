@@ -1,13 +1,25 @@
 export default function SalesAutomationContent() {
   return (
-    <div className="px-10 py-16 space-y-24 text-white max-w-5xl mx-auto">
+    <div
+      className="
+        px-6 py-14 space-y-20 text-white
+        md:px-10 md:py-16 md:space-y-24
+        max-w-5xl mx-auto
+      "
+    >
 
-      {/* HERO TITLE — centered, ABOVE image */}
+      {/* HERO */}
       <section className="text-center">
-        <h2 className="text-5xl font-black mb-4">
+        <h2
+          className="
+            font-black
+            text-4xl leading-tight mb-4
+            md:text-5xl
+          "
+        >
           Sales & Operations Automation
         </h2>
-        <p className="text-teal-300 text-xl">
+        <p className="text-teal-300 text-lg md:text-xl">
           From first contact to sent offer — automatically.
         </p>
       </section>
@@ -22,8 +34,8 @@ export default function SalesAutomationContent() {
       </section>
 
       {/* PROBLEM */}
-      <section className="max-w-3xl">
-        <h3 className="text-3xl font-bold mb-4">
+      <section className="md:max-w-3xl">
+        <h3 className="text-2xl font-bold mb-4 md:text-3xl">
           The problem
         </h3>
         <p className="text-white/80 leading-relaxed">
@@ -35,8 +47,8 @@ export default function SalesAutomationContent() {
       </section>
 
       {/* SOLUTION */}
-      <section className="max-w-3xl">
-        <h3 className="text-3xl font-bold mb-4">
+      <section className="md:max-w-3xl">
+        <h3 className="text-2xl font-bold mb-4 md:text-3xl">
           The solution
         </h3>
         <p className="text-white/80 leading-relaxed">
@@ -46,13 +58,13 @@ export default function SalesAutomationContent() {
         </p>
       </section>
 
-      {/* HOW IT WORKS — BLOCKS */}
+      {/* HOW IT WORKS */}
       <section>
-        <h3 className="text-3xl font-bold mb-8">
+        <h3 className="text-2xl font-bold mb-8 md:text-3xl">
           How it works
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
           {[
             {
               title: "Inbound requests",
@@ -73,9 +85,14 @@ export default function SalesAutomationContent() {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-white/5 p-6 rounded-xl border border-white/10"
+              className="
+                bg-white/5 p-6 rounded-xl border border-white/10
+                text-sm
+              "
             >
-              <p className="font-semibold mb-2">{item.title}</p>
+              <p className="font-semibold mb-2">
+                {item.title}
+              </p>
               <p className="opacity-70 whitespace-pre-line">
                 {item.text}
               </p>
@@ -94,11 +111,11 @@ export default function SalesAutomationContent() {
       </section>
 
       {/* WHAT’S AUTOMATED */}
-      <section className="max-w-4xl">
-        <h3 className="text-3xl font-bold mb-6">
+      <section className="md:max-w-4xl">
+        <h3 className="text-2xl font-bold mb-6 md:text-3xl">
           What’s automated
         </h3>
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-white/80">
+        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 text-white/80">
           <li>• Lead intake</li>
           <li>• Data validation</li>
           <li>• CRM synchronization</li>
@@ -109,12 +126,12 @@ export default function SalesAutomationContent() {
       </section>
 
       {/* USE CASES */}
-      <section className="max-w-4xl">
-        <h3 className="text-3xl font-bold mb-6">
+      <section className="md:max-w-4xl">
+        <h3 className="text-2xl font-bold mb-6 md:text-3xl">
           Typical use cases
         </h3>
 
-        <div className="space-y-6 text-white/80">
+        <div className="space-y-4 text-white/80">
           <p>
             • Logistics & container sales — incoming requests are instantly
             validated, priced, and turned into ready-to-send offers.
@@ -130,9 +147,9 @@ export default function SalesAutomationContent() {
         </div>
       </section>
 
-      {/* CONNECTED MODULES — vertical list */}
-      <section className="max-w-4xl">
-        <h3 className="text-3xl font-bold mb-6">
+      {/* CONNECTED MODULES */}
+      <section className="md:max-w-4xl">
+        <h3 className="text-2xl font-bold mb-6 md:text-3xl">
           Connected modules
         </h3>
         <ul className="text-white/80 space-y-2">
@@ -145,7 +162,7 @@ export default function SalesAutomationContent() {
 
       {/* MICRO CTA */}
       <section className="pt-8 border-t border-white/10">
-        <p className="text-xl font-semibold">
+        <p className="text-lg font-semibold md:text-xl">
           This system typically replaces the workload of
           <span className="text-teal-300"> 2–3 full-time roles</span>
           — while responding to clients in seconds.
