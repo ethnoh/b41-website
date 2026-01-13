@@ -4,9 +4,16 @@ export default function WebMonitoringContent() {
 
       {/* HERO */}
       <section className="text-center">
-        <h2 className="text-5xl font-black mb-4">
+        <h2
+          className="
+            font-black mb-4
+            text-[32px] leading-tight
+            md:text-5xl md:leading-none
+          "
+        >
           Automated Web Monitoring
         </h2>
+
         <p className="text-xl text-teal-300 mb-10">
           Be the first to know. Automatically.
         </p>
