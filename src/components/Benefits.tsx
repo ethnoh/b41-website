@@ -7,24 +7,33 @@ export default function Benefits() {
   ];
 
   return (
-    <section id="benefits" className="relative w-full text-white">
+    <section
+      id="benefits"
+      className="
+        relative w-full text-white
+
+        /* MOBILE — THIS FIXES THE TOP HOLE */
+        min-h-[100svh]
+
+        /* DESKTOP */
+        md:min-h-0
+      "
+    >
       {/* WRAPPER */}
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden">
         {/* BACKGROUND */}
         <div
           className="
             absolute inset-0
             bg-no-repeat
 
-            /* ================= MOBILE FIX ================= */
-            bg-[length:200%_auto]
-            bg-[position:center_22%]
-            min-h-[135vh]
+            /* MOBILE — enough height for content */
+            bg-[length:180%_auto]
+            bg-[position:center_25%]
 
-            /* ================= DESKTOP — UNTOUCHED ================= */
+            /* DESKTOP — UNTOUCHED */
             md:bg-top
             md:bg-[length:100%_auto]
-            md:min-h-0
           "
           style={{
             backgroundImage: "url(/assets/backgrounds/benefits.png)",
@@ -47,11 +56,11 @@ export default function Benefits() {
             flex justify-center
             px-6
 
-            /* ================= MOBILE ================= */
-            pt-[6vh]
-            pb-[14vh]
+            /* MOBILE */
+            pt-[10vh]
+            pb-[16vh]
 
-            /* ================= DESKTOP — UNTOUCHED ================= */
+            /* DESKTOP — UNTOUCHED */
             md:pt-40
             md:pb-48
           "
