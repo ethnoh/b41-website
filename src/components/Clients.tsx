@@ -55,10 +55,10 @@ export default function Clients() {
           relative z-20
           flex justify-center
 
-          /* MOBILE */
-          px-6 pt-[10vh] pb-[14vh]
+          /* MOBILE — подняли выше */
+          px-6 pt-[6vh] pb-[10vh]
 
-          /* DESKTOP */
+          /* DESKTOP — НЕ ТРОГАЕМ */
           md:px-50 md:pt-0 md:pb-100
         "
       >
@@ -69,8 +69,8 @@ export default function Clients() {
               font-black
 
               /* MOBILE */
-              text-[clamp(38px,9vw,52px)]
-              mb-4
+              text-[clamp(34px,8vw,48px)]
+              mb-3
 
               /* DESKTOP */
               md:text-6xl md:mb-6
@@ -85,8 +85,8 @@ export default function Clients() {
               opacity-85
 
               /* MOBILE */
-              text-[16px]
-              mb-10
+              text-[15px]
+              mb-8
 
               /* DESKTOP */
               md:text-2xl md:mb-20
@@ -98,7 +98,7 @@ export default function Clients() {
           {/* LOGOS */}
           <div
             className="
-              flex flex-col gap-10 items-center
+              flex flex-col gap-8 items-center
 
               /* DESKTOP */
               md:flex-row md:flex-wrap md:gap-20 md:justify-center
@@ -125,10 +125,10 @@ export default function Clients() {
                   className="
                     select-none
 
-                    /* MOBILE — smaller, no squish */
-                    h-14 w-auto
+                    /* MOBILE — ЕЩЁ МЕНЬШЕ */
+                    h-12 w-auto
 
-                    /* DESKTOP — original */
+                    /* DESKTOP — как было */
                     md:h-20
                     drop-shadow-[0_0_20px_rgba(0,255,255,0.25)]
                   "
