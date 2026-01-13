@@ -55,22 +55,23 @@ export default function Clients() {
           relative z-20
           flex justify-center
 
-          /* MOBILE — подняли выше */
-          px-6 pt-[6vh] pb-[10vh]
+          /* MOBILE — немного выше */
+          px-6 pt-[4.5vh] pb-[10vh]
 
-          /* DESKTOP — НЕ ТРОГАЕМ */
-          md:px-50 md:pt-0 md:pb-100
+          /* DESKTOP — чуть ниже (аккуратно) */
+          md:px-50 md:pt-[6vh] md:pb-100
         "
       >
         <div className="max-w-6xl mx-auto text-center w-full">
           {/* TITLE */}
           <h2
             className="
-              font-black
+              font-black tracking-tight
 
-              /* MOBILE */
-              text-[clamp(34px,8vw,48px)]
-              mb-3
+              /* MOBILE — same as Contact style */
+              text-[clamp(36px,8.5vw,48px)]
+              leading-[0.95]
+              mb-4
 
               /* DESKTOP */
               md:text-6xl md:mb-6
@@ -125,8 +126,8 @@ export default function Clients() {
                   className="
                     select-none
 
-                    /* MOBILE — ЕЩЁ МЕНЬШЕ */
-                    h-12 w-auto
+                    /* MOBILE — чуть меньше */
+                    h-10 w-auto
 
                     /* DESKTOP — как было */
                     md:h-20
