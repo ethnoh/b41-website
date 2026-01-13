@@ -6,7 +6,7 @@ import ContactModal from "./ContactModal";
 export default function Contact() {
   const [open, setOpen] = useState(false);
 
-  const CONTENT_PT = "pt-24 md:pt-44";
+  const CONTENT_PT = "pt-32 md:pt-44";
   const CONTENT_PB = "pb-32 md:pb-72";
 
   return (
