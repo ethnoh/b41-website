@@ -15,6 +15,7 @@ export default function Services() {
 
           /* MOBILE — grow by content */
           min-h-[100svh]
+          max-md:min-h-0
 
           /* DESKTOP */
           lg:min-h-0
