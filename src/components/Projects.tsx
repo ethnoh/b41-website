@@ -88,9 +88,23 @@ export default function Projects() {
       <div className="relative z-20 flex justify-center pt-10 pb-60 px-6">
         <div className="max-w-6xl mx-auto text-center">
           {/* TITLE */}
-          <h2 className="text-6xl font-black mb-24">
+          <h2
+            className="
+              font-black tracking-tight
+
+              /* MOBILE */
+              text-[clamp(38px,9vw,52px)]
+              leading-[0.95]
+              mb-10
+
+              /* DESKTOP */
+              md:text-6xl
+              md:mb-24
+            "
+          >
             What we deliver
           </h2>
+
 
           {/* PROJECT CARDS */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
