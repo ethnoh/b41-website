@@ -9,7 +9,7 @@ export default function Process() {
   // 🔧 CONTROL — crop top of background image (px)
   const TOP_CROP_PX = 0;
 
-  // 🔥 MANUAL DIAGONAL OFFSETS (px)
+  // 🔥 MANUAL DIAGONAL OFFSETS (DESKTOP ONLY)
   const offsets = [90, 280, 0, 160];
 
   return (
@@ -36,10 +36,11 @@ export default function Process() {
       {/* BOTTOM FADE */}
       <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
 
-      {/* CONTENT */}
-      <div className="relative z-20 flex justify-center pt-40 pb-56 px-6">
+      {/* ========================= */}
+      {/* ===== DESKTOP (LOCKED) === */}
+      {/* ========================= */}
+      <div className="relative z-20 hidden md:flex justify-center pt-40 pb-56 px-6">
         <div className="max-w-5xl mx-auto text-center">
-
           {/* TITLE */}
           <h2 className="text-6xl font-black mb-28">
             How we work
@@ -47,7 +48,6 @@ export default function Process() {
 
           {/* PROCESS */}
           <div className="relative flex flex-col gap-6 items-start max-w-xl mx-auto">
-
             {steps.map((step, i) => (
               <div
                 key={i}
@@ -61,13 +61,49 @@ export default function Process() {
 
                 {/* TEXT */}
                 <div className="text-plate">
-                  <span className="neon-outline text-3xl md:text-4xl font-semibold tracking-wide">
+                  <span className="neon-outline text-4xl font-semibold tracking-wide">
                     {step}
                   </span>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
 
+      {/* ========================= */}
+      {/* ===== MOBILE ONLY ======= */}
+      {/* ========================= */}
+      <div className="relative z-20 md:hidden flex justify-center pt-24 pb-40 px-6">
+        <div className="max-w-md w-full text-center">
+          {/* TITLE — same logic as About */}
+          <h2
+            className="
+              font-black tracking-tight
+              text-[clamp(38px,9vw,52px)]
+              leading-[0.95]
+              mb-16
+            "
+          >
+            How we work
+          </h2>
+
+          {/* STACKED PROCESS */}
+          <div className="flex flex-col gap-10 items-start">
+            {steps.map((step, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-6"
+              >
+                {/* DOT */}
+                <div className="w-4 h-4 shrink-0 rounded-full bg-cyan-400 shadow-[0_0_18px_rgba(0,255,255,0.85)]" />
+
+                {/* TEXT */}
+                <span className="neon-outline text-2xl font-semibold tracking-wide">
+                  {step}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
