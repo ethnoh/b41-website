@@ -4,9 +4,16 @@ export default function AIVisualStorytellingContent() {
 
       {/* TITLE */}
       <div className="text-center">
-        <h1 className="text-5xl font-black mb-4">
+        <h1
+          className="
+            font-black mb-4
+            text-[32px] leading-tight
+            md:text-5xl
+          "
+        >
           AI Visual Storytelling
         </h1>
+
         <p className="text-teal-300 text-lg">
           Turning ideas, processes, and products into cinematic visuals.
         </p>
@@ -17,14 +24,23 @@ export default function AIVisualStorytellingContent() {
         <img
           src="/projects/ai-visual-storytelling/hero.png"
           alt="AI Visual Storytelling"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="
+            absolute inset-0 w-full h-full
+            object-contain md:object-cover
+            p-4 md:p-0
+          "
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/40 md:block hidden" />
       </div>
 
       {/* WHAT IT’S USED FOR */}
       <div>
-        <h2 className="text-3xl font-semibold mb-6">
+        <h2
+          className="
+            text-2xl font-semibold mb-6
+            md:text-3xl
+          "
+        >
           What it’s used for
         </h2>
 
@@ -43,7 +59,12 @@ export default function AIVisualStorytellingContent() {
 
       {/* HOW IT WORKS */}
       <div>
-        <h2 className="text-3xl font-semibold mb-10">
+        <h2
+          className="
+            text-2xl font-semibold mb-10
+            md:text-3xl
+          "
+        >
           How it works
         </h2>
 
@@ -70,7 +91,9 @@ export default function AIVisualStorytellingContent() {
               key={card.title}
               className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6"
             >
-              <h3 className="font-semibold mb-4">{card.title}</h3>
+              <h3 className="font-semibold mb-4">
+                {card.title}
+              </h3>
               <ul className="space-y-2 text-sm text-white/70">
                 {card.items.map((item) => (
                   <li key={item}>• {item}</li>
@@ -113,7 +136,12 @@ export default function AIVisualStorytellingContent() {
 
       {/* WHY IT MATTERS */}
       <div className="text-white/80">
-        <h2 className="text-3xl font-semibold mb-6">
+        <h2
+          className="
+            text-2xl font-semibold mb-6
+            md:text-3xl
+          "
+        >
           Why it matters
         </h2>
         <ul className="space-y-2">
