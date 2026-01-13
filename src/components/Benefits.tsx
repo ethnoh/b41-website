@@ -7,32 +7,18 @@ export default function Benefits() {
   ];
 
   return (
-    <section
-      id="benefits"
-      className="
-        relative w-full text-white
-
-        /* MOBILE — THIS FIXES THE TOP HOLE */
-        min-h-[100svh]
-
-        /* DESKTOP */
-        md:min-h-0
-      "
-    >
-      {/* WRAPPER */}
-      <div className="relative w-full h-full overflow-hidden">
+    <section id="benefits" className="relative w-full text-white">
+      <div className="relative w-full overflow-hidden">
         {/* BACKGROUND */}
         <div
           className="
             absolute inset-0
-            bg-no-repeat
+            bg-no-repeat bg-top
 
-            /* MOBILE — enough height for content */
-            bg-[length:180%_auto]
-            bg-[position:center_25%]
+            /* MOBILE */
+            bg-[length:140%_auto]
 
-            /* DESKTOP — UNTOUCHED */
-            md:bg-top
+            /* DESKTOP */
             md:bg-[length:100%_auto]
           "
           style={{
@@ -40,14 +26,8 @@ export default function Benefits() {
           }}
         />
 
-        {/* DESKTOP OVERLAY — UNTOUCHED */}
+        {/* DESKTOP OVERLAY */}
         <div className="absolute inset-0 bg-black/40 pointer-events-none hidden md:block" />
-
-        {/* DESKTOP TOP FADE — UNTOUCHED */}
-        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none hidden md:block" />
-
-        {/* DESKTOP BOTTOM FADE — UNTOUCHED */}
-        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none hidden md:block" />
 
         {/* CONTENT */}
         <div
@@ -58,25 +38,20 @@ export default function Benefits() {
 
             /* MOBILE */
             pt-[10vh]
-            pb-[16vh]
+            pb-[12vh]
 
-            /* DESKTOP — UNTOUCHED */
+            /* DESKTOP */
             md:pt-40
             md:pb-48
           "
         >
           <div className="max-w-6xl mx-auto text-center w-full">
-            {/* TITLE */}
             <h2
               className="
                 font-black tracking-tight
-
-                /* MOBILE */
                 text-[clamp(38px,9vw,52px)]
                 leading-[0.95]
                 mb-8
-
-                /* DESKTOP */
                 md:text-6xl
                 md:mb-24
               "
@@ -84,14 +59,11 @@ export default function Benefits() {
               Why B41
             </h2>
 
-            {/* BENEFITS */}
             <div
               className="
                 grid grid-cols-1
                 gap-y-5
                 place-items-center
-
-                /* DESKTOP */
                 md:grid-cols-2
                 md:gap-y-20
                 md:gap-x-32
@@ -104,12 +76,8 @@ export default function Benefits() {
                     font-semibold
                     tracking-wide
                     text-center
-
-                    /* MOBILE */
                     text-[15px]
                     leading-snug
-
-                    /* DESKTOP */
                     md:text-3xl
                   "
                 >
@@ -121,8 +89,8 @@ export default function Benefits() {
           </div>
         </div>
 
-        {/* MOBILE — SOFT BOTTOM BLEND */}
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black md:hidden" />
+        {/* MOBILE BOTTOM FADE — склейка с Clients */}
+        <div className="absolute bottom-0 left-0 w-full h-[12vh] bg-gradient-to-b from-transparent to-black md:hidden" />
       </div>
     </section>
   );

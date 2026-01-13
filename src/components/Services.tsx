@@ -46,7 +46,7 @@ export default function Services() {
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
         {/* TOP FADE */}
-        <div className="absolute top-0 left-0 w-full h-[30vh] bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none lg:hidden" />
+        <div className="absolute top-0 left-0 w-full h-[14vh] bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none lg:hidden" />
         <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent pointer-events-none hidden lg:block" />
 
         {/* CONTENT */}
