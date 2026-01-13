@@ -1,7 +1,6 @@
 export default function AIVisualStorytellingContent() {
   return (
     <div className="space-y-20">
-
       {/* TITLE */}
       <div className="text-center">
         <h1
@@ -20,27 +19,28 @@ export default function AIVisualStorytellingContent() {
       </div>
 
       {/* HERO IMAGE */}
-      <div className="relative h-64 md:h-80 rounded-xl overflow-hidden border border-white/10">
+      {/* ✅ MOBILE: show full image (no crop) */}
+      <div className="md:hidden rounded-xl overflow-hidden border border-white/10 bg-black/40">
         <img
           src="/projects/ai-visual-storytelling/hero.png"
           alt="AI Visual Storytelling"
-          className="
-            absolute inset-0 w-full h-full
-            object-contain md:object-cover
-            p-4 md:p-0
-          "
+          className="w-full h-auto object-contain"
         />
-        <div className="absolute inset-0 bg-black/40 md:block hidden" />
+      </div>
+
+      {/* ✅ DESKTOP: keep EXACTLY your original behavior */}
+      <div className="hidden md:block relative h-64 md:h-80 rounded-xl overflow-hidden border border-white/10">
+        <img
+          src="/projects/ai-visual-storytelling/hero.png"
+          alt="AI Visual Storytelling"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* WHAT IT’S USED FOR */}
       <div>
-        <h2
-          className="
-            text-2xl font-semibold mb-6
-            md:text-3xl
-          "
-        >
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6">
           What it’s used for
         </h2>
 
@@ -59,12 +59,7 @@ export default function AIVisualStorytellingContent() {
 
       {/* HOW IT WORKS */}
       <div>
-        <h2
-          className="
-            text-2xl font-semibold mb-10
-            md:text-3xl
-          "
-        >
+        <h2 className="text-2xl md:text-3xl font-semibold mb-10">
           How it works
         </h2>
 
@@ -91,9 +86,7 @@ export default function AIVisualStorytellingContent() {
               key={card.title}
               className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6"
             >
-              <h3 className="font-semibold mb-4">
-                {card.title}
-              </h3>
+              <h3 className="font-semibold mb-4">{card.title}</h3>
               <ul className="space-y-2 text-sm text-white/70">
                 {card.items.map((item) => (
                   <li key={item}>• {item}</li>
@@ -136,12 +129,7 @@ export default function AIVisualStorytellingContent() {
 
       {/* WHY IT MATTERS */}
       <div className="text-white/80">
-        <h2
-          className="
-            text-2xl font-semibold mb-6
-            md:text-3xl
-          "
-        >
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6">
           Why it matters
         </h2>
         <ul className="space-y-2">
@@ -154,9 +142,9 @@ export default function AIVisualStorytellingContent() {
 
       {/* DISCLAIMER */}
       <div className="text-center text-sm text-white/50">
-        This is not our core service, but a creative extension of our AI capabilities.
+        This is not our core service, but a creative extension of our AI
+        capabilities.
       </div>
-
     </div>
   );
 }
