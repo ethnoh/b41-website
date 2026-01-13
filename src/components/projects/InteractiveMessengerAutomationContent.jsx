@@ -2,14 +2,26 @@ import Image from "next/image";
 
 export default function InteractiveMessengerAutomationContent() {
   return (
-    <div className="space-y-20">
-
+    <div
+      className="
+        space-y-20 text-white
+        md:px-10 md:py-16 md:space-y-24
+        md:max-w-5xl md:mx-auto
+      "
+    >
       {/* HERO */}
-      <section className="text-center space-y-6">
-        <h2 className="text-6xl font-black">
+      <section className="text-center">
+        <h2
+          className="
+            font-black mb-4
+            text-[32px] leading-tight
+            md:text-5xl md:leading-none
+          "
+        >
           Interactive Messenger Automation
         </h2>
-        <p className="text-lg text-teal-300">
+
+        <p className="text-xl text-teal-300">
           Operational workflows delivered through messengers
         </p>
 
@@ -26,12 +38,13 @@ export default function InteractiveMessengerAutomationContent() {
       </section>
 
       {/* PROBLEM */}
-      <section className="max-w-4xl space-y-4">
-        <h3 className="text-4xl font-black">The problem</h3>
+      <section className="md:max-w-4xl space-y-4">
+        <h3 className="text-3xl font-bold">The problem</h3>
         <p className="text-white/70 leading-relaxed">
           Operational tasks are often slow, manual, and error-prone — especially
           in the field.
-          <br /><br />
+          <br />
+          <br />
           Data is collected across messages, photos, spreadsheets, and systems,
           forcing operators to switch tools, repeat steps, and manually validate
           information.
@@ -39,12 +52,13 @@ export default function InteractiveMessengerAutomationContent() {
       </section>
 
       {/* SOLUTION */}
-      <section className="max-w-4xl space-y-4">
-        <h3 className="text-4xl font-black">The solution</h3>
+      <section className="md:max-w-4xl space-y-4">
+        <h3 className="text-3xl font-bold">The solution</h3>
         <p className="text-white/70 leading-relaxed">
           We build interactive automation systems that guide users step by step
           through operational workflows.
-          <br /><br />
+          <br />
+          <br />
           Messengers become structured control panels — handling validation,
           AI processing, OCR, and backend automation automatically.
         </p>
@@ -55,8 +69,8 @@ export default function InteractiveMessengerAutomationContent() {
       </section>
 
       {/* USE CASES */}
-      <section className="max-w-4xl space-y-4">
-        <h3 className="text-4xl font-black">Use cases</h3>
+      <section className="md:max-w-4xl space-y-4">
+        <h3 className="text-3xl font-bold">Use cases</h3>
         <ul className="list-disc list-inside text-white/70 space-y-2">
           <li>Inventory checks and availability requests</li>
           <li>Field inspections and container condition reporting</li>
@@ -68,7 +82,9 @@ export default function InteractiveMessengerAutomationContent() {
 
       {/* TEXT QUERY EXAMPLE */}
       <section className="space-y-10">
-        <h3 className="text-4xl font-black">Text-based operational queries</h3>
+        <h3 className="text-3xl font-bold">
+          Text-based operational queries
+        </h3>
 
         <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
           <Image
@@ -80,16 +96,16 @@ export default function InteractiveMessengerAutomationContent() {
           />
         </div>
 
-        <p className="max-w-4xl text-white/60 leading-relaxed">
-          Operators can ask free-text questions in a messenger.  
+        <p className="md:max-w-4xl text-white/60 leading-relaxed">
+          Operators can ask free-text questions in a messenger.
           The system interprets the request, queries internal data sources, and
           returns structured, reliable answers — without manual searching.
         </p>
       </section>
 
       {/* WHY IT MATTERS */}
-      <section className="max-w-4xl space-y-4">
-        <h3 className="text-4xl font-black">Why it matters</h3>
+      <section className="md:max-w-4xl space-y-4">
+        <h3 className="text-3xl font-bold">Why it matters</h3>
         <ul className="list-disc list-inside text-white/70 space-y-2">
           <li>No training required</li>
           <li>Works on any device</li>
@@ -100,57 +116,43 @@ export default function InteractiveMessengerAutomationContent() {
 
       {/* HOW IT WORKS */}
       <section className="space-y-10">
-        <h3 className="text-4xl font-black">How it works</h3>
+        <h3 className="text-3xl font-bold">How it works</h3>
 
-        {/* MINI BLOCKS */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-          <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10">
-            <h4 className="text-lg font-semibold mb-2">Input</h4>
-            <p className="text-white/70 leading-relaxed">
-              Messages<br />
-              Buttons<br />
-              Photos
-            </p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10">
-            <h4 className="text-lg font-semibold mb-2">Interface logic</h4>
-            <p className="text-white/70 leading-relaxed">
-              Step-by-step flow<br />
-              Validation<br />
-              UI controls
-            </p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10">
-            <h4 className="text-lg font-semibold mb-2">AI & OCR</h4>
-            <p className="text-white/70 leading-relaxed">
-              Text understanding<br />
-              Image recognition<br />
-              Data extraction
-            </p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10">
-            <h4 className="text-lg font-semibold mb-2">Automation core</h4>
-            <p className="text-white/70 leading-relaxed">
-              Business rules<br />
-              Processing<br />
-              File handling
-            </p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10">
-            <h4 className="text-lg font-semibold mb-2">Storage & output</h4>
-            <p className="text-white/70 leading-relaxed">
-              Google Sheets<br />
-              Cloud storage<br />
-              Reports
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-sm">
+          {[
+            {
+              title: "Input",
+              text: "Messages\nButtons\nPhotos",
+            },
+            {
+              title: "Interface logic",
+              text: "Step-by-step flow\nValidation\nUI controls",
+            },
+            {
+              title: "AI & OCR",
+              text: "Text understanding\nImage recognition\nData extraction",
+            },
+            {
+              title: "Automation core",
+              text: "Business rules\nProcessing\nFile handling",
+            },
+            {
+              title: "Storage & output",
+              text: "Google Sheets\nCloud storage\nReports",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10"
+            >
+              <p className="font-semibold mb-2">{item.title}</p>
+              <p className="text-white/70 leading-relaxed whitespace-pre-line">
+                {item.text}
+              </p>
+            </div>
+          ))}
         </div>
 
-        {/* ARCHITECTURE IMAGE */}
         <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
           <Image
             src="/projects/messenger-automation/architecture.png"
@@ -163,15 +165,14 @@ export default function InteractiveMessengerAutomationContent() {
       </section>
 
       {/* CONNECTED MODULES */}
-      <section className="max-w-4xl space-y-4">
-        <h3 className="text-4xl font-black">Connected modules</h3>
+      <section className="md:max-w-4xl space-y-4">
+        <h3 className="text-3xl font-bold">Connected modules</h3>
         <ul className="list-disc list-inside text-white/70 space-y-2">
           <li>Automation Core</li>
           <li>OCR & Document Intelligence</li>
           <li>AI Knowledge Assistant</li>
         </ul>
       </section>
-
     </div>
   );
 }
