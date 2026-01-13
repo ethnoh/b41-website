@@ -74,7 +74,7 @@ export default function Process() {
       {/* ========================= */}
       {/* ===== MOBILE ONLY ======= */}
       {/* ========================= */}
-      <div className="relative z-20 md:hidden flex justify-center pt-24 pb-40 px-6">
+      <div className="relative z-20 md:hidden flex justify-center pt-14 pb-32 px-6">
         <div className="max-w-md w-full text-center">
           {/* TITLE — same logic as About */}
           <h2
@@ -82,7 +82,7 @@ export default function Process() {
               font-black tracking-tight
               text-[clamp(38px,9vw,52px)]
               leading-[0.95]
-              mb-16
+              mb-12
             "
           >
             How we work
