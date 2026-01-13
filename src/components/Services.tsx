@@ -1,9 +1,9 @@
 export default function Services() {
   const items = [
-    "AI Automation",
-    "Logistics AI",
-    "OCR / Documents",
-    "Custom Tools",
+    "Sales & Operations\nAutomation",
+    "Document & Invoice\nAutomation (OCR)",
+    "AI Assistants for\nLogistics Teams",
+    "Custom AI Systems for\nYour Workflow",
   ];
 
   return (
@@ -20,7 +20,6 @@ export default function Services() {
           lg:min-h-0
         "
       >
-
         {/* BACKGROUND */}
         <img
           src="/assets/backgrounds/services.png"
@@ -72,7 +71,7 @@ export default function Services() {
               className="
                 font-black tracking-tight
 
-                /* MOBILE — slightly stronger */
+                /* MOBILE */
                 text-[clamp(38px,9vw,52px)]
                 leading-[0.95]
                 mb-8
@@ -107,14 +106,15 @@ export default function Services() {
                       neon-outline
                       font-black
                       text-center
+                      whitespace-pre-line
 
-                      /* MOBILE — slightly bigger */
-                      text-[17px]
-                      leading-tight
+                      /* MOBILE — REDUCED */
+                      text-[14px]
+                      leading-snug
 
-                      /* DESKTOP */
-                      md:text-4xl
-                      md:whitespace-nowrap
+                      /* DESKTOP — REDUCED */
+                      md:text-[28px]
+                      md:leading-tight
                     "
                   >
                     {item}

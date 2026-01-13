@@ -1,22 +1,25 @@
 export default function Benefits() {
   const benefits = [
-    "Reduce manual work by 70%",
-    "Cut operational costs",
-    "Eliminate repetitive errors",
-    "Scale operations instantly",
+    "Reduce manual work by up to 70% in operations",
+    "Eliminate repetitive human errors",
+    "Cut operational costs across sales & back office",
+    "Scale operations without hiring more people",
   ];
 
   return (
     <section id="benefits" className="relative w-full text-white">
       {/* WRAPPER */}
       <div className="relative w-full overflow-hidden">
+        {/* MOBILE — TOP BLACK GLUE */}
+        <div className="absolute top-0 left-0 w-full h-[10vh] bg-black md:hidden z-0" />
+
         {/* BACKGROUND */}
         <div
           className="
             absolute inset-0
             bg-no-repeat bg-top
 
-            /* MOBILE — zoom background slightly */
+            /* MOBILE — zoom slightly to gain height */
             bg-[length:120%_auto]
 
             /* DESKTOP — PERFECT, UNTOUCHED */
@@ -44,7 +47,7 @@ export default function Benefits() {
             px-6
 
             /* MOBILE */
-            pt-[8vh] pb-[14vh]
+            pt-[10vh] pb-[14vh]
 
             /* DESKTOP — UNTOUCHED */
             md:pt-40 md:pb-48
@@ -66,7 +69,7 @@ export default function Benefits() {
                 md:mb-24
               "
             >
-              Why b41.ai
+              Why B41
             </h2>
 
             {/* BENEFITS */}
@@ -91,7 +94,7 @@ export default function Benefits() {
                     text-center
 
                     /* MOBILE */
-                    text-[16px]
+                    text-[15px]
                     leading-snug
 
                     /* DESKTOP */
