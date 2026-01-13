@@ -25,7 +25,8 @@ export default function Hero() {
             drop-shadow-[0_25px_100px_rgba(0,0,0,0.85)]
 
             /* MOBILE */
-            w-[360px]
+            w-[280px] sm:w-[320px]
+
 
             /* DESKTOP */
             md:w-[420px]
