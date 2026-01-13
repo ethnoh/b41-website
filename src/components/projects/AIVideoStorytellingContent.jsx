@@ -40,9 +40,9 @@ export default function AIVisualStorytellingContent() {
 
       {/* WHAT IT’S USED FOR */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+        <h3 className="text-3xl font-bold mb-6">
           What it’s used for
-        </h2>
+        </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/80">
           <ul className="space-y-2">
@@ -59,9 +59,9 @@ export default function AIVisualStorytellingContent() {
 
       {/* HOW IT WORKS */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-semibold mb-10">
+        <h3 className="text-3xl font-bold mb-10">
           How it works
-        </h2>
+        </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
@@ -129,9 +129,9 @@ export default function AIVisualStorytellingContent() {
 
       {/* WHY IT MATTERS */}
       <div className="text-white/80">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+        <h3 className="text-3xl font-bold mb-6">
           Why it matters
-        </h2>
+        </h3>
         <ul className="space-y-2">
           <li>• Makes complex ideas instantly understandable</li>
           <li>• Elevates product & process storytelling</li>
