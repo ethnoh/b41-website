@@ -21,23 +21,54 @@ export default function Hero() {
           src="/assets/logos/logo.png"
           alt="b41.ai logo"
           className="
-            w-[620px] md:w-[680px] lg:w-[720px]
             opacity-90
             drop-shadow-[0_25px_100px_rgba(0,0,0,0.85)]
+
+            /* MOBILE */
+            w-[360px]
+
+            /* DESKTOP */
+            md:w-[420px]
+            lg:w-[460px]
           "
         />
       </div>
 
-
-
-      {/* TOP TEXT BLOCK (UNCHANGED) */}
+      {/* TOP TEXT BLOCK */}
       <div className="absolute top-[12vh] left-1/2 -translate-x-1/2 z-10 text-center px-6 w-full max-w-5xl">
-        <h1 className="whitespace-nowrap text-[clamp(3.5rem,6vw,6.5rem)] font-black tracking-tight leading-none mb-4 drop-shadow-[0_4px_20px_rgba(0,0,0,0.75)]">
-          We automate logistics
+        <h1
+          className="
+            font-black tracking-tight leading-none
+            drop-shadow-[0_4px_20px_rgba(0,0,0,0.75)]
+
+            /* MOBILE */
+            text-[clamp(2.2rem,7vw,3rem)]
+            mb-3
+
+            /* DESKTOP */
+            md:text-[clamp(2.6rem,4.2vw,4.4rem)]
+            md:whitespace-nowrap
+
+            md:mb-4
+          "
+        >
+          AI Solutions for Logistics Ops
         </h1>
 
-        <p className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight opacity-90 drop-shadow-[0_2px_14px_rgba(0,0,0,0.65)]">
-          With experience. With AI.
+        <p
+          className="
+            font-semibold tracking-tight opacity-90
+            drop-shadow-[0_2px_14px_rgba(0,0,0,0.65)]
+
+            /* MOBILE */
+            text-[clamp(1.1rem,4.5vw,1.4rem)]
+
+            /* DESKTOP */
+            md:text-2xl
+            lg:text-3xl
+          "
+        >
+          We build AI that replaces manual work — not people.
         </p>
       </div>
 
@@ -46,9 +77,13 @@ export default function Hero() {
         <button
           onClick={() => setOpen(true)}
           className="
-            px-12 py-4 text-lg font-semibold rounded-full
+            whitespace-nowrap
+
+            /* same visual logic as Contact block */
+            px-14 py-5 text-lg font-semibold rounded-full
             bg-white text-black shadow-2xl
-            hover:bg-neutral-200 transition duration-200
+            hover:bg-neutral-200 hover:scale-105
+            transition duration-200
           "
         >
           Contact us
