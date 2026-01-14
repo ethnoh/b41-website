@@ -166,9 +166,6 @@ export default function ContactModal({
               <p className="text-neutral-300">
                 Your request has been sent. We’ll get back to you shortly.
               </p>
-              <p className="text-neutral-500 text-sm mt-4">
-                Closing automatically…
-              </p>
             </div>
           )}
         </div>
