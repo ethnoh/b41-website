@@ -42,6 +42,13 @@ export default function ContactModal({
 
       setSuccess(true);
       e.currentTarget.reset();
+
+      // ✅ AUTO-CLOSE AFTER SUCCESS
+      setTimeout(() => {
+        setSuccess(false);
+        setError(false);
+        onClose();
+      }, 2000);
     } catch (err) {
       console.error(err);
       setError(true);
@@ -156,19 +163,12 @@ export default function ContactModal({
           ) : (
             <div className="text-center py-16">
               <h3 className="text-2xl font-bold mb-4">Thank you!</h3>
-              <p className="text-neutral-300 mb-8">
+              <p className="text-neutral-300">
                 Your request has been sent. We’ll get back to you shortly.
               </p>
-              <button
-                onClick={onClose}
-                className="
-                  px-10 py-3 rounded-full
-                  bg-white text-black font-semibold
-                  hover:bg-neutral-200 transition
-                "
-              >
-                Close
-              </button>
+              <p className="text-neutral-500 text-sm mt-4">
+                Closing automatically…
+              </p>
             </div>
           )}
         </div>
