@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "b41.ai — AI Solutions for Logistics Ops",
+  title: "AI Solutions for Logistics Ops",
   description: "AI-powered automation and custom systems for logistics teams.",
   icons: {
     icon: [
