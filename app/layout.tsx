@@ -16,9 +16,12 @@ export const metadata: Metadata = {
   title: "b41.ai — AI Solutions for Logistics Ops",
   description: "AI-powered automation and custom systems for logistics teams.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+    ],
   },
 };
+
 
 export default function RootLayout({
   children,
