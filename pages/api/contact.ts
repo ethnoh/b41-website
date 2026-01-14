@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(
   req: NextApiRequest,
@@ -11,29 +13,25 @@ export default async function handler(
 
   const { name, email, phone, message } = req.body;
 
-  try {
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-    });
+  if (!name || !email || !message) {
+    return res.status(400).json({ success: false, message: "Missing fields" });
+  }
 
-    await transporter.sendMail({
-      from: `"b41.ai Contact" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_USER,
-      subject: "New contact request",
+  try {
+    await resend.emails.send({
+      from: "b41.ai <onboarding@resend.dev>", // временно, позже заменим на info@b41.ai
+      to: [
+        "monaldrec@gmail.com",
+        // "second@email.com" ← добавишь позже
+      ],
+      subject: "New contact request — b41.ai",
       html: `
+        <h2>New contact request</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong><br/>${message}</p>
+        ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
       `,
     });
 
