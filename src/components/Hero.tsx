@@ -18,7 +18,7 @@ export default function Hero() {
       {/* CENTER LOGO */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
         <img
-          src="/assets/logos/logo.png"
+          src="/assets/logos/logo.svg"
           alt="b41.ai logo"
           className="
             opacity-90
