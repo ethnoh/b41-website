@@ -100,7 +100,7 @@ export default function AIVisualStorytellingContent() {
       {/* VIDEO — BUSINESS */}
       <div>
         <video
-          src="https://b41media.blob.core.windows.net/videos/ai-story-container.webm"
+          src="https://github.com/ethnoh/b41-website/releases/download/videos-v1/ai-story-container.webm"
           muted
           playsInline
           controls
@@ -115,7 +115,7 @@ export default function AIVisualStorytellingContent() {
       {/* VIDEO — CREATIVE */}
       <div>
         <video
-          src="https://b41media.blob.core.windows.net/videos/ai-story-diwali.webm"
+          src="https://github.com/ethnoh/b41-website/releases/download/videos-v1/ai-story-diwali.webm"
           muted
           playsInline
           controls
