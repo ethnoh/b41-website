@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const stats = [
   { value: "70%", label: "Manual work reduced" },
@@ -50,23 +49,6 @@ export default function Hero() {
 
       {/* Main content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center pt-24 pb-16">
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex justify-center mb-10"
-        >
-          <Image
-            src="/assets/logo.svg"
-            alt="B41 — Based on AI"
-            width={160}
-            height={98}
-            style={{ filter: "brightness(0)" }}
-            priority
-          />
-        </motion.div>
-
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
