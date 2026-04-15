@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+import ContactModal from "./ContactModal";
 
 const stats = [
   { value: "70%", label: "Manual work reduced" },
@@ -9,6 +11,8 @@ const stats = [
 ];
 
 export default function Hero() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   const scrollTo = (href: string) => {
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -99,7 +103,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => scrollTo("#contact")}
+            onClick={() => setModalOpen(true)}
             className="px-8 py-4 rounded-full text-base font-semibold text-white gradient-bg hover:opacity-90 transition-all hover:scale-[1.03] active:scale-[0.98]"
             style={{ boxShadow: "0 8px 24px rgba(160,82,45,0.35)" }}
           >
@@ -152,6 +156,8 @@ export default function Hero() {
           <div className="w-1 h-2 rounded-full bg-gray-400" />
         </motion.div>
       </motion.div>
+
+      <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }

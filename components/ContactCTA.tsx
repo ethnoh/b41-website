@@ -1,8 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+import ContactModal from "./ContactModal";
 
 export default function ContactCTA() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section
       id="contact"
@@ -93,21 +97,21 @@ export default function ContactCTA() {
           viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a
-            href="mailto:hello@b41.ai"
+          <button
+            onClick={() => setModalOpen(true)}
             className="px-10 py-4 rounded-full text-base font-semibold text-white gradient-bg hover:opacity-90 transition-all hover:scale-[1.03] active:scale-[0.98]"
             style={{ boxShadow: "0 8px 32px rgba(160,82,45,0.45)" }}
           >
             Let's Talk
-          </a>
+          </button>
           <a
-            href="mailto:hello@b41.ai"
+            href="mailto:sales@b41.ai"
             className="text-base font-medium flex items-center gap-2 transition-colors"
             style={{ color: "rgba(250,250,248,0.5)" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#fafaf8")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(250,250,248,0.5)")}
           >
-            hello@b41.ai →
+            sales@b41.ai →
           </a>
         </motion.div>
 
@@ -123,6 +127,8 @@ export default function ContactCTA() {
           No sales pitch. Just a conversation about what's possible.
         </motion.p>
       </div>
+
+      <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }

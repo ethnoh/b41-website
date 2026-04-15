@@ -39,11 +39,11 @@ export default function Footer() {
               work — not people.
             </p>
             <a
-              href="mailto:hello@b41.ai"
+              href="mailto:sales@b41.ai"
               className="text-sm font-medium transition-colors"
               style={{ color: "#cd853f" }}
             >
-              hello@b41.ai
+              sales@b41.ai
             </a>
           </div>
 
