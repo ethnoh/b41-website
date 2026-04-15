@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const testimonials = [
   {
     quote:
-      "We have been working together on an AI Chatbot assistant and the early results have been positive. The collaboration has been smooth, professional, and constructive.",
+      "I'm pleased to provide this letter of recommendation for B41. We have been working together on an AI Chatbot assistant for our EQSPRO container software application and the early results have been positive.",
     name: "Ms Frances Claibourn",
     title: "Sales & Marketing Director",
     company: "Speed-IT Limited",
