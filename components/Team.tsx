@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const team = [
   {
     initials: "EH",
-    name: "Ethno H.",
+    name: "Edgars Jubelis",
     role: "Founder & Lead Engineer",
     description:
       "Builds AI automation systems for logistics companies across Eastern Europe. Specialises in LLMs, document processing, and end-to-end operations automation.",
