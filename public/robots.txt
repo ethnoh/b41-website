@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://b41.ai/sitemap.xml
