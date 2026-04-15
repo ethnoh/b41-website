@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const team = [
   {
-    initials: "EH",
+    initials: "EJ",
     name: "Edgars Jubelis",
     role: "Founder & Lead Engineer",
     description:
