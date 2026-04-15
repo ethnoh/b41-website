@@ -9,18 +9,21 @@ const clients = [
     name: "Conway Container Solutions",
     description: "Container shipping & intermodal logistics",
     bg: "#5C3D2E",
+    href: "https://conwaycs.com/",
   },
   {
     src: "/assets/logo-speedit.png",
     name: "Speed-IT",
     description: "Technology-driven freight forwarding",
     bg: "#4A3A2A",
+    href: "https://eqspro.global/",
   },
   {
     src: "/assets/logo-latflex.png",
     name: "Latflex",
     description: "Flexible supply chain & warehousing solutions",
     bg: "#3D2F23",
+    href: "https://latflex.com/",
   },
 ];
 
@@ -28,8 +31,8 @@ export default function Clients() {
   return (
     <section
       id="clients"
-      className="py-20 border-y border-gray-200"
-      style={{ background: "#2A2018" }}
+      className="py-20"
+      style={{ background: "#F0E6D2", borderTop: "1px solid #DDD0B8", borderBottom: "1px solid #DDD0B8" }}
       aria-labelledby="clients-heading"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -40,23 +43,27 @@ export default function Clients() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.4 }}
           className="text-center text-xs font-semibold uppercase tracking-[0.2em] mb-12"
-          style={{ color: "rgba(255,255,255,0.45)" }}
+          style={{ color: "#8B6347" }}
         >
           Trusted by leading logistics companies
         </motion.p>
 
         <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {clients.map((c, i) => (
-            <motion.div
+            <motion.a
               key={c.name}
+              href={c.href}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.88 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.3 }}
-              className="flex flex-col items-center text-center gap-4 p-8 rounded-2xl transition-all hover:-translate-y-1 hover:brightness-110"
+              className="flex flex-col items-center text-center gap-4 p-8 rounded-2xl transition-all hover:-translate-y-1 hover:brightness-110 cursor-pointer"
               style={{
                 background: c.bg,
                 boxShadow: "0 4px 20px rgba(0,0,0,0.25)",
+                textDecoration: "none",
               }}
             >
               {/* Logo image */}
@@ -74,7 +81,7 @@ export default function Clients() {
                 <p className="font-bold text-white text-[15px] leading-snug">{c.name}</p>
                 <p className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.55)" }}>{c.description}</p>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
