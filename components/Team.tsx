@@ -9,8 +9,8 @@ const team = [
     role: "Founder & Lead Engineer",
     description:
       "Builds AI automation systems for logistics companies across Eastern Europe. Specialises in LLMs, document processing, and end-to-end operations automation.",
-    gradient: "from-purple-500 to-violet-600",
-    ringGradient: "from-purple-400/30 to-violet-500/10",
+    gradient: "from-[#A0522D] to-[#8B4513]",
+    ring: "rgba(160,82,45,0.2)",
   },
   {
     initials: "AI",
@@ -18,8 +18,8 @@ const team = [
     role: "Machine Learning & Integration",
     description:
       "Designs and deploys custom AI pipelines. Takes ML models from research prototype to production in live logistics environments.",
-    gradient: "from-cyan-500 to-blue-500",
-    ringGradient: "from-cyan-400/30 to-blue-500/10",
+    gradient: "from-[#CD5C5C] to-[#A0522D]",
+    ring: "rgba(205,92,92,0.2)",
   },
   {
     initials: "OL",
@@ -27,8 +27,8 @@ const team = [
     role: "Logistics & Process Design",
     description:
       "Logistics industry veteran. Maps workflows, identifies the highest-value automation opportunities, and ensures every AI solution fits real operational constraints.",
-    gradient: "from-violet-500 to-purple-700",
-    ringGradient: "from-violet-400/30 to-purple-600/10",
+    gradient: "from-[#8B4513] to-[#5C3D2E]",
+    ring: "rgba(139,69,19,0.2)",
   },
 ];
 
@@ -49,12 +49,15 @@ export default function Team() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-purple-500 mb-4 block">
+          <span
+            className="text-sm font-semibold uppercase tracking-widest mb-4 block"
+            style={{ color: "var(--accent-primary)" }}
+          >
             About
           </span>
           <h2
             id="team-heading"
-            className="text-4xl lg:text-5xl font-black text-gray-900 mb-5 leading-[1.1]"
+            className="text-4xl lg:text-5xl text-gray-900 mb-5 leading-[1.1]"
           >
             The team behind B41
           </h2>
@@ -78,11 +81,10 @@ export default function Team() {
             >
               {/* Avatar with gradient ring */}
               <div className="relative mb-6">
-                {/* Ring */}
                 <div
-                  className={`absolute -inset-1.5 rounded-full bg-gradient-to-br ${member.ringGradient} blur-sm`}
+                  className="absolute -inset-1.5 rounded-full blur-sm"
+                  style={{ background: member.ring }}
                 />
-                {/* Avatar */}
                 <div
                   className={`relative w-20 h-20 rounded-full bg-gradient-to-br ${member.gradient} flex items-center justify-center text-xl font-black text-white`}
                 >
@@ -91,7 +93,10 @@ export default function Team() {
               </div>
 
               <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-              <span className="text-sm font-semibold text-purple-500 mb-4 block">
+              <span
+                className="text-sm font-semibold mb-4 block"
+                style={{ color: "var(--accent-primary)" }}
+              >
                 {member.role}
               </span>
               <p className="text-gray-500 text-sm leading-relaxed">{member.description}</p>

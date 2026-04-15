@@ -1,25 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const clients = [
   {
-    initials: "CC",
+    src: "/assets/logo-conway.png",
     name: "Conway Container Solutions",
     description: "Container shipping & intermodal logistics",
-    gradient: "from-purple-500 to-violet-600",
   },
   {
-    initials: "SI",
+    src: "/assets/logo-speedit.png",
     name: "Speed-IT",
     description: "Technology-driven freight forwarding",
-    gradient: "from-cyan-500 to-blue-500",
   },
   {
-    initials: "LF",
+    src: "/assets/logo-latflex.png",
     name: "Latflex",
     description: "Flexible supply chain & warehousing solutions",
-    gradient: "from-violet-500 to-purple-700",
   },
 ];
 
@@ -53,10 +51,15 @@ export default function Clients() {
               viewport={{ once: true, amount: 0.3 }}
               className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl hover:bg-gray-50 transition-colors"
             >
-              <div
-                className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${c.gradient} flex items-center justify-center text-base font-black text-white shadow-md`}
-              >
-                {c.initials}
+              {/* Logo image */}
+              <div className="w-full h-14 flex items-center justify-center relative">
+                <Image
+                  src={c.src}
+                  alt={c.name}
+                  width={140}
+                  height={56}
+                  className="object-contain max-h-12"
+                />
               </div>
               <div>
                 <p className="font-bold text-gray-900 text-[15px] leading-snug">{c.name}</p>

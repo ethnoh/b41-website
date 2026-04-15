@@ -46,12 +46,15 @@ export default function Benefits() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-cyan-500 mb-4 block">
+          <span
+            className="text-sm font-semibold uppercase tracking-widest mb-4 block"
+            style={{ color: "var(--accent-secondary)" }}
+          >
             Why B41
           </span>
           <h2
             id="benefits-heading"
-            className="text-4xl lg:text-5xl font-black text-gray-900 leading-[1.1]"
+            className="text-4xl lg:text-5xl text-gray-900 leading-[1.1]"
           >
             What you get when you{" "}
             <span className="gradient-text">automate with us</span>

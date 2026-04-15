@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const stats = [
   { value: "70%", label: "Manual work reduced" },
@@ -23,16 +24,16 @@ export default function Hero() {
       {/* Animated gradient blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden>
         <div
-          className="blob absolute -top-48 -right-32 w-[520px] h-[520px] rounded-full opacity-[0.18]"
-          style={{ background: "radial-gradient(circle, #a855f7, transparent 65%)" }}
+          className="blob absolute -top-48 -right-32 w-[520px] h-[520px] rounded-full opacity-[0.15]"
+          style={{ background: "radial-gradient(circle, #a0522d, transparent 65%)" }}
         />
         <div
-          className="blob blob-delay-2 absolute top-1/2 -left-48 w-[400px] h-[400px] rounded-full opacity-[0.13]"
-          style={{ background: "radial-gradient(circle, #06b6d4, transparent 65%)" }}
+          className="blob blob-delay-2 absolute top-1/2 -left-48 w-[400px] h-[400px] rounded-full opacity-[0.10]"
+          style={{ background: "radial-gradient(circle, #cd5c5c, transparent 65%)" }}
         />
         <div
-          className="blob blob-delay-4 absolute bottom-16 right-1/3 w-[320px] h-[320px] rounded-full opacity-[0.1]"
-          style={{ background: "radial-gradient(circle, #8b5cf6, transparent 65%)" }}
+          className="blob blob-delay-4 absolute bottom-16 right-1/3 w-[320px] h-[320px] rounded-full opacity-[0.08]"
+          style={{ background: "radial-gradient(circle, #8b4513, transparent 65%)" }}
         />
       </div>
 
@@ -49,15 +50,39 @@ export default function Hero() {
 
       {/* Main content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center pt-24 pb-16">
-        {/* Badge */}
+        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-200 bg-purple-50/60 mb-8"
+          className="flex justify-center mb-10"
         >
-          <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
-          <span className="text-sm font-medium text-purple-700">
+          <Image
+            src="/assets/logo.svg"
+            alt="B41 — Based on AI"
+            width={160}
+            height={98}
+            style={{ filter: "brightness(0)" }}
+            priority
+          />
+        </motion.div>
+
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-8"
+          style={{
+            borderColor: "var(--accent-border)",
+            background: "var(--accent-light)",
+          }}
+        >
+          <span
+            className="w-2 h-2 rounded-full animate-pulse"
+            style={{ background: "var(--accent-primary)" }}
+          />
+          <span className="text-sm font-medium" style={{ color: "#7B3F00" }}>
             AI-Powered Logistics Automation
           </span>
         </motion.div>
@@ -66,8 +91,8 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-          className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-gray-900 mb-6 leading-[1.08]"
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="text-5xl sm:text-6xl lg:text-7xl tracking-tight text-gray-900 mb-6 leading-[1.08]"
         >
           AI Solutions for{" "}
           <span className="gradient-text">Logistics</span>
@@ -93,7 +118,8 @@ export default function Hero() {
         >
           <button
             onClick={() => scrollTo("#contact")}
-            className="px-8 py-4 rounded-full text-base font-semibold text-white gradient-bg hover:opacity-90 transition-all hover:scale-[1.03] shadow-lg shadow-purple-200/60 active:scale-[0.98]"
+            className="px-8 py-4 rounded-full text-base font-semibold text-white gradient-bg hover:opacity-90 transition-all hover:scale-[1.03] active:scale-[0.98]"
+            style={{ boxShadow: "0 8px 24px rgba(160,82,45,0.35)" }}
           >
             Start Your AI Project
           </button>

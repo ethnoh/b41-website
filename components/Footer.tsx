@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
@@ -17,19 +19,20 @@ export default function Footer() {
   return (
     <footer style={{ background: "#111111" }}>
       {/* Gradient divider */}
-      <div className="h-px gradient-bg opacity-30" aria-hidden />
+      <div className="h-px gradient-bg opacity-40" aria-hidden />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2.5 mb-5">
-              <span className="text-2xl font-black tracking-tight text-white leading-none">
-                B<span className="text-purple-400">41</span>
-              </span>
-              <span className="text-[10px] font-semibold text-gray-500 uppercase tracking-[0.2em]">
-                BASED ON AI
-              </span>
+            <div className="mb-5">
+              <Image
+                src="/assets/logo.svg"
+                alt="B41 — Based on AI"
+                width={64}
+                height={40}
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-5">
               AI automation solutions for logistics operations. We build AI that replaces manual
@@ -37,7 +40,8 @@ export default function Footer() {
             </p>
             <a
               href="mailto:hello@b41.ai"
-              className="text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors"
+              className="text-sm font-medium transition-colors"
+              style={{ color: "#cd853f" }}
             >
               hello@b41.ai
             </a>

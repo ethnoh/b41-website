@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -38,13 +39,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <button onClick={() => scrollTo("#")} className="flex items-center gap-2.5 group">
-            <span className="text-2xl font-black tracking-tight text-gray-900 leading-none">
-              B<span className="text-purple-500">41</span>
-            </span>
-            <span className="hidden sm:block text-[10px] font-semibold text-gray-400 uppercase tracking-[0.2em] leading-none">
-              BASED ON AI
-            </span>
+          <button onClick={() => scrollTo("#")} className="flex items-center gap-3">
+            <Image
+              src="/assets/logo.svg"
+              alt="B41 — Based on AI"
+              width={48}
+              height={30}
+              style={{ filter: "brightness(0)" }}
+              priority
+            />
           </button>
 
           {/* Desktop nav */}
@@ -64,7 +67,8 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => scrollTo("#contact")}
-              className="hidden lg:flex items-center px-5 py-2.5 rounded-full text-sm font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-md shadow-purple-200"
+              className="hidden lg:flex items-center px-5 py-2.5 rounded-full text-sm font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-md"
+              style={{ boxShadow: "0 4px 12px rgba(160,82,45,0.3)" }}
             >
               Start Project
             </button>

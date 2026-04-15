@@ -5,24 +5,28 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
+    emoji: "🔍",
     title: "Discovery",
     description:
       "We map your current workflows end-to-end, identify the highest-value automation opportunities, and define a clear project scope with measurable outcomes.",
   },
   {
     number: "02",
+    emoji: "🏗️",
     title: "Architecture",
     description:
       "We design the AI system architecture tailored to your tech stack, data sources, and operational constraints — before writing a single line of code.",
   },
   {
     number: "03",
+    emoji: "⚙️",
     title: "Build",
     description:
       "We develop, test, and iterate with your team in tight cycles. You see real progress every week — not a big reveal at the end.",
   },
   {
     number: "04",
+    emoji: "🚀",
     title: "Deploy & Support",
     description:
       "We ship to production, monitor performance closely, and provide ongoing support as your operations evolve and the system grows.",
@@ -46,12 +50,15 @@ export default function Process() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center max-w-2xl mx-auto mb-20"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-cyan-500 mb-4 block">
+          <span
+            className="text-sm font-semibold uppercase tracking-widest mb-4 block"
+            style={{ color: "var(--accent-secondary)" }}
+          >
             How We Work
           </span>
           <h2
             id="process-heading"
-            className="text-4xl lg:text-5xl font-black text-gray-900 mb-5 leading-[1.1]"
+            className="text-4xl lg:text-5xl text-gray-900 mb-5 leading-[1.1]"
           >
             From idea to{" "}
             <span className="gradient-text">production</span>
@@ -73,7 +80,13 @@ export default function Process() {
             className="absolute left-8 top-8 bottom-8 w-px hidden lg:block"
             aria-hidden
           >
-            <div className="w-full h-full bg-gradient-to-b from-purple-400 via-violet-400 to-cyan-400 rounded-full" />
+            <div
+              className="w-full h-full rounded-full"
+              style={{
+                background:
+                  "linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary))",
+              }}
+            />
           </motion.div>
 
           <div className="space-y-6">
@@ -88,8 +101,11 @@ export default function Process() {
               >
                 {/* Step circle */}
                 <div className="flex-shrink-0 relative z-10">
-                  <div className="w-16 h-16 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center shadow-sm">
-                    <span className="text-lg font-black gradient-text">{step.number}</span>
+                  <div className="w-16 h-16 rounded-full border-2 border-gray-200 bg-white flex flex-col items-center justify-center shadow-sm gap-0.5">
+                    <span className="text-base leading-none">{step.emoji}</span>
+                    <span className="text-[10px] font-black gradient-text leading-none">
+                      {step.number}
+                    </span>
                   </div>
                 </div>
 

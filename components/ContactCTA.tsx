@@ -13,16 +13,16 @@ export default function ContactCTA() {
       {/* Background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <div
-          className="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full opacity-25"
-          style={{ background: "radial-gradient(circle, #7c3aed, transparent 65%)" }}
+          className="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full opacity-30"
+          style={{ background: "radial-gradient(circle, #a0522d, transparent 65%)" }}
         />
         <div
-          className="absolute -bottom-24 -right-24 w-[400px] h-[400px] rounded-full opacity-18"
-          style={{ background: "radial-gradient(circle, #0891b2, transparent 65%)" }}
+          className="absolute -bottom-24 -right-24 w-[400px] h-[400px] rounded-full opacity-20"
+          style={{ background: "radial-gradient(circle, #cd5c5c, transparent 65%)" }}
         />
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.06]"
-          style={{ background: "radial-gradient(circle, #a855f7, transparent 70%)" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.07]"
+          style={{ background: "radial-gradient(circle, #cd853f, transparent 70%)" }}
         />
       </div>
 
@@ -44,10 +44,17 @@ export default function ContactCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-8"
+          style={{
+            borderColor: "rgba(160,82,45,0.35)",
+            background: "rgba(160,82,45,0.12)",
+          }}
         >
-          <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
-          <span className="text-sm font-medium text-purple-300">
+          <span
+            className="w-2 h-2 rounded-full animate-pulse"
+            style={{ background: "#cd853f" }}
+          />
+          <span className="text-sm font-medium" style={{ color: "#e8c8a8" }}>
             Ready to automate your logistics?
           </span>
         </motion.div>
@@ -59,7 +66,7 @@ export default function ContactCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
-          className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.08]"
+          className="text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-[1.08]"
         >
           Let's automate your{" "}
           <span className="gradient-text">logistics operations</span>
@@ -71,7 +78,8 @@ export default function ContactCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
-          className="text-xl text-gray-400 mb-12 max-w-xl mx-auto leading-relaxed"
+          className="text-xl mb-12 max-w-xl mx-auto leading-relaxed"
+          style={{ color: "rgba(250,250,248,0.65)" }}
         >
           Tell us about your workflow. We'll map the automation opportunities and show you exactly
           what's possible — no commitment required.
@@ -87,16 +95,19 @@ export default function ContactCTA() {
         >
           <a
             href="mailto:hello@b41.ai"
-            className="px-10 py-4 rounded-full text-base font-semibold text-white gradient-bg hover:opacity-90 transition-all hover:scale-[1.03] shadow-xl shadow-purple-900/40 active:scale-[0.98]"
+            className="px-10 py-4 rounded-full text-base font-semibold text-white gradient-bg hover:opacity-90 transition-all hover:scale-[1.03] active:scale-[0.98]"
+            style={{ boxShadow: "0 8px 32px rgba(160,82,45,0.45)" }}
           >
             Let's Talk
           </a>
           <a
             href="mailto:hello@b41.ai"
-            className="text-base font-medium text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+            className="text-base font-medium flex items-center gap-2 transition-colors"
+            style={{ color: "rgba(250,250,248,0.5)" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#fafaf8")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(250,250,248,0.5)")}
           >
-            hello@b41.ai
-            <span className="text-gray-600">→</span>
+            hello@b41.ai →
           </a>
         </motion.div>
 
@@ -106,7 +117,8 @@ export default function ContactCTA() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="mt-10 text-sm text-gray-600"
+          className="mt-10 text-sm"
+          style={{ color: "rgba(250,250,248,0.3)" }}
         >
           No sales pitch. Just a conversation about what's possible.
         </motion.p>
