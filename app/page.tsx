@@ -8,10 +8,12 @@ import Team from "@/components/Team";
 import Process from "@/components/Process";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
+import FloatingContacts from "@/components/FloatingContacts";
 
 export default function Home() {
   return (
     <main>
+      <FloatingContacts />
       <Hero />
       <Clients />
       <Testimonials />
