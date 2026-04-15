@@ -25,8 +25,8 @@ export default function Clients() {
   return (
     <section
       id="clients"
-      className="py-20 border-y border-gray-100"
-      style={{ background: "var(--bg-primary)" }}
+      className="py-20 border-y border-gray-200"
+      style={{ background: "var(--bg-alt)" }}
       aria-labelledby="clients-heading"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -49,7 +49,8 @@ export default function Clients() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.3 }}
-              className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl hover:bg-gray-50 transition-colors"
+              className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-white border border-gray-100 transition-all hover:shadow-md hover:-translate-y-0.5"
+              style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}
             >
               {/* Logo image */}
               <div className="w-full h-14 flex items-center justify-center relative">

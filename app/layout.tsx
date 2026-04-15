@@ -21,6 +21,10 @@ export const metadata: Metadata = {
     "Automate logistics operations with custom AI systems. Reduce manual work by 70%, eliminate errors, and scale without hiring more people.",
   keywords:
     "AI automation, logistics automation, operations automation, AI systems, document automation, OCR, invoice processing",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
   openGraph: {
     title: "AI Solutions for Logistics Operations | B41",
     description: "Custom AI systems that automate repetitive logistics tasks.",
