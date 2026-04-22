@@ -4,16 +4,16 @@
 :root {
   --bg-primary: #fafaf8;
   --bg-alt: #f5f4f0;
-  --bg-dark: #0b1f2d;           /* Dark blue for contrast sections */
+  --bg-dark: #111111;           /* Near-black for contrast sections */
   --text-primary: #1a1a1a;
   --text-secondary: #666666;
   --text-light: #999999;
 
-  /* Deep blue palette */
-  --accent-primary: #0f3460;    /* Deep blue – main accent */
-  --accent-secondary: #1a5276;  /* Deeper blue – hover states */
-  --accent-light: #ebf5fb;      /* Very light blue tint */
-  --accent-border: #aed6f1;     /* Light blue border colour */
+  /* Black / white / gray palette */
+  --accent-primary: #1a1a1a;    /* Near-black – main accent */
+  --accent-secondary: #2d3436;  /* Dark gray – hover states */
+  --accent-light: #f5f5f5;      /* Very light gray tint */
+  --accent-border: #d0d0d0;     /* Light gray border colour */
 
   --card-bg: #ffffff;
   --card-border: #e5e5e0;
@@ -58,14 +58,14 @@ h2 {
 
 /* ─── Gradient Utilities ─────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #0f3460 0%, #1a5276 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #636e72 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, #0f3460 0%, #1a5276 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
 }
 
 /* ─── Blob Animations ────────────────────────────────────────── */

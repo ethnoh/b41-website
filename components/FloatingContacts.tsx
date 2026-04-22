@@ -52,11 +52,11 @@ export default function FloatingContacts() {
           whileTap={{ scale: 0.95 }}
           className="w-11 h-11 rounded-full flex items-center justify-center text-white shadow-lg transition-colors duration-200"
           style={{
-            background: "#0F3460",
-            boxShadow: "0 4px 14px rgba(15,52,96,0.45)",
+            background: "#1A1A1A",
+            boxShadow: "0 4px 14px rgba(0,0,0,0.35)",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "#0D2E4A")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "#0F3460")}
+          onMouseEnter={(e) => (e.currentTarget.style.background = "#2D3436")}
+          onMouseLeave={(e) => (e.currentTarget.style.background = "#1A1A1A")}
         >
           {c.icon}
         </motion.a>

@@ -9,8 +9,8 @@ const team = [
     role: "Founder & Lead Engineer",
     description:
       "Builds AI automation systems for logistics companies across Eastern Europe. Specialises in LLMs, document processing, and end-to-end operations automation.",
-    gradient: "from-[#0F3460] to-[#0D2E4A]",
-    ring: "rgba(15,52,96,0.2)",
+    gradient: "from-[#1A1A1A] to-[#2D3436]",
+    ring: "rgba(0,0,0,0.15)",
   },
   {
     initials: "AI",
@@ -18,8 +18,8 @@ const team = [
     role: "Machine Learning & Integration",
     description:
       "Designs and deploys custom AI pipelines. Takes ML models from research prototype to production in live logistics environments.",
-    gradient: "from-[#1A5276] to-[#0F3460]",
-    ring: "rgba(26,82,118,0.2)",
+    gradient: "from-[#2D3436] to-[#1A1A1A]",
+    ring: "rgba(45,52,54,0.2)",
   },
   {
     initials: "OL",
@@ -27,8 +27,8 @@ const team = [
     role: "Logistics & Process Design",
     description:
       "Logistics industry veteran. Maps workflows, identifies the highest-value automation opportunities, and ensures every AI solution fits real operational constraints.",
-    gradient: "from-[#0D2E4A] to-[#0B1F2D]",
-    ring: "rgba(13,46,74,0.2)",
+    gradient: "from-[#2D3436] to-[#111111]",
+    ring: "rgba(45,52,54,0.2)",
   },
 ];
 

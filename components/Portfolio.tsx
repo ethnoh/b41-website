@@ -13,7 +13,7 @@ const projects = [
     details:
       "Full pipeline from document ingestion to ERP integration. Handles PDFs, scanned docs, and email attachments automatically. Achieves 98.7% field-level accuracy on standard freight invoices with a human-review fallback for edge cases.",
     tags: ["OCR", "AI", "ERP Integration"],
-    gradient: "from-[#0F3460] to-[#0D2E4A]",
+    gradient: "from-[#1A1A1A] to-[#2D3436]",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const projects = [
     details:
       "Integrated with existing CRM via API. Handles lead scoring, personalised email sequences, task creation, and Slack notifications for the sales team. Deal progression improved by 3× after deployment.",
     tags: ["CRM", "Sales", "Automation"],
-    gradient: "from-[#1A5276] to-[#0F3460]",
+    gradient: "from-[#2D3436] to-[#1A1A1A]",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const projects = [
     details:
       "Deployed as an internal Slack bot and web interface. Trained on all company documentation — can generate quotes, answer operational questions, and escalate to a human when needed. Zero data leaves the client's environment.",
     tags: ["AI Assistant", "LLM", "Private Deployment"],
-    gradient: "from-[#0D2E4A] to-[#0B1F2D]",
+    gradient: "from-[#2D3436] to-[#111111]",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const projects = [
     details:
       "Connected to email, a document portal, and the operations system. Trained on 3 years of historical documents. Saves 2+ hours per day in manual sorting and routing, and eliminates mis-routing errors.",
     tags: ["Classification", "AI", "Workflow"],
-    gradient: "from-[#1A5276] to-[#0F3460]",
+    gradient: "from-[#2D3436] to-[#1A1A1A]",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const projects = [
     details:
       "Live data feeds from TMS, carrier APIs, and email. AI-powered anomaly detection with configurable thresholds. Sends alerts via Slack and email. Fully mobile-responsive. Reduced incident response time by over 60%.",
     tags: ["Monitoring", "Alerts", "Dashboard"],
-    gradient: "from-[#1E6B9E] to-[#0D2E4A]",
+    gradient: "from-[#636E72] to-[#2D3436]",
   },
 ];
 
@@ -165,7 +165,7 @@ export default function Portfolio() {
             transition={{ duration: 0.22 }}
             onClick={() => setSelected(null)}
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
-            style={{ background: "rgba(11,31,45,0.7)", backdropFilter: "blur(6px)" }}
+            style={{ background: "rgba(0,0,0,0.7)", backdropFilter: "blur(6px)" }}
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"

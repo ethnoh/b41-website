@@ -8,21 +8,21 @@ const clients = [
     src: "/assets/logo-conway.png",
     name: "Conway Container Solutions",
     description: "Container shipping & intermodal logistics",
-    bg: "#0B1F2D",
+    bg: "#1A1A1A",
     href: "https://conwaycs.com/",
   },
   {
     src: "/assets/logo-speedit.png",
     name: "Speed-IT",
     description: "Technology-driven freight forwarding",
-    bg: "#0D2E4A",
+    bg: "#2D3436",
     href: "https://eqspro.global/",
   },
   {
     src: "/assets/logo-latflex.png",
     name: "Latflex",
     description: "Flexible supply chain & warehousing solutions",
-    bg: "#152638",
+    bg: "#3D3D3D",
     href: "https://latflex.com/",
   },
 ];
@@ -32,7 +32,7 @@ export default function Clients() {
     <section
       id="clients"
       className="py-20"
-      style={{ background: "#F5F5F5", borderTop: "1px solid #C8D8E8", borderBottom: "1px solid #C8D8E8" }}
+      style={{ background: "#FFFFFF", borderTop: "1px solid #E5E5E5", borderBottom: "1px solid #E5E5E5" }}
       aria-labelledby="clients-heading"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -43,7 +43,7 @@ export default function Clients() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.4 }}
           className="text-center text-xs font-semibold uppercase tracking-[0.2em] mb-12"
-          style={{ color: "#1A5276" }}
+          style={{ color: "#636E72" }}
         >
           Trusted by leading logistics companies
         </motion.p>
