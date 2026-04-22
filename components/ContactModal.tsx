@@ -54,9 +54,9 @@ export default function ContactModal({
 
   const inputCls = `
     w-full px-4 py-3 rounded-xl text-gray-900 text-sm
-    bg-[#FAF7F4] border border-[#E8D5C4]
+    bg-[#F5F9FF] border border-[#AED6F1]
     placeholder:text-gray-400
-    focus:outline-none focus:border-[#A0522D] focus:bg-white focus:ring-2 focus:ring-[#A0522D]/15
+    focus:outline-none focus:border-[#0F3460] focus:bg-white focus:ring-2 focus:ring-[#0F3460]/15
     transition-all duration-200
   `;
 
@@ -70,7 +70,7 @@ export default function ContactModal({
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
           className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4"
-          style={{ background: "rgba(42,20,12,0.65)", backdropFilter: "blur(6px)" }}
+          style={{ background: "rgba(11,31,45,0.65)", backdropFilter: "blur(6px)" }}
           role="dialog"
           aria-modal="true"
           aria-labelledby="contact-modal-title"
@@ -83,12 +83,12 @@ export default function ContactModal({
             exit={{ opacity: 0, scale: 0.95, y: 24 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             className="relative w-full max-w-lg rounded-2xl overflow-hidden bg-white"
-            style={{ boxShadow: "0 24px 80px rgba(92,61,46,0.30)" }}
+            style={{ boxShadow: "0 24px 80px rgba(15,52,96,0.30)" }}
           >
             {/* Top accent bar */}
             <div
               className="absolute top-0 left-0 right-0 h-[3px]"
-              style={{ background: "linear-gradient(90deg, #A0522D 0%, #CD5C5C 50%, #CD853F 100%)" }}
+              style={{ background: "linear-gradient(90deg, #0F3460 0%, #1A5276 50%, #1E6B9E 100%)" }}
               aria-hidden
             />
 
@@ -108,11 +108,11 @@ export default function ContactModal({
                   <div className="mb-7">
                     <div
                       className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-3"
-                      style={{ background: "#FDF0E8", color: "#A0522D" }}
+                      style={{ background: "#EBF5FB", color: "#0F3460" }}
                     >
                       <span
                         className="w-1.5 h-1.5 rounded-full animate-pulse"
-                        style={{ background: "#A0522D" }}
+                        style={{ background: "#0F3460" }}
                       />
                       Get in touch
                     </div>
@@ -163,7 +163,7 @@ export default function ContactModal({
                       type="submit"
                       disabled={loading}
                       className="w-full py-3 rounded-xl text-sm font-semibold text-white gradient-bg hover:opacity-90 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
-                      style={{ boxShadow: "0 6px 20px rgba(160,82,45,0.35)" }}
+                      style={{ boxShadow: "0 6px 20px rgba(15,52,96,0.35)" }}
                     >
                       {loading ? "Sending…" : "Send message"}
                     </button>
@@ -183,9 +183,9 @@ export default function ContactModal({
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                     className="w-14 h-14 rounded-full mx-auto mb-5 flex items-center justify-center"
-                    style={{ background: "#FDF0E8", border: "1px solid #E8C8A8" }}
+                    style={{ background: "#EBF5FB", border: "1px solid #AED6F1" }}
                   >
-                    <span className="text-2xl" style={{ color: "#A0522D" }}>✓</span>
+                    <span className="text-2xl" style={{ color: "#0F3460" }}>✓</span>
                   </motion.div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Message sent!</h3>
                   <p className="text-gray-500 text-sm">

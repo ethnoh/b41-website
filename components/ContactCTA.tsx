@@ -18,15 +18,15 @@ export default function ContactCTA() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         <div
           className="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full opacity-30"
-          style={{ background: "radial-gradient(circle, #a0522d, transparent 65%)" }}
+          style={{ background: "radial-gradient(circle, #0f3460, transparent 65%)" }}
         />
         <div
           className="absolute -bottom-24 -right-24 w-[400px] h-[400px] rounded-full opacity-20"
-          style={{ background: "radial-gradient(circle, #cd5c5c, transparent 65%)" }}
+          style={{ background: "radial-gradient(circle, #1a5276, transparent 65%)" }}
         />
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.07]"
-          style={{ background: "radial-gradient(circle, #cd853f, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, #1e6b9e, transparent 70%)" }}
         />
       </div>
 
@@ -50,15 +50,15 @@ export default function ContactCTA() {
           viewport={{ once: true, amount: 0.3 }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-8"
           style={{
-            borderColor: "rgba(160,82,45,0.35)",
-            background: "rgba(160,82,45,0.12)",
+            borderColor: "rgba(15,52,96,0.35)",
+            background: "rgba(15,52,96,0.12)",
           }}
         >
           <span
             className="w-2 h-2 rounded-full animate-pulse"
-            style={{ background: "#cd853f" }}
+            style={{ background: "#1e6b9e" }}
           />
-          <span className="text-sm font-medium" style={{ color: "#e8c8a8" }}>
+          <span className="text-sm font-medium" style={{ color: "#aed6f1" }}>
             Ready to automate your logistics?
           </span>
         </motion.div>
@@ -100,7 +100,7 @@ export default function ContactCTA() {
           <button
             onClick={() => setModalOpen(true)}
             className="px-10 py-4 rounded-full text-base font-semibold text-white gradient-bg hover:opacity-90 transition-all hover:scale-[1.03] active:scale-[0.98]"
-            style={{ boxShadow: "0 8px 32px rgba(160,82,45,0.45)" }}
+            style={{ boxShadow: "0 8px 32px rgba(15,52,96,0.45)" }}
           >
             Let's Talk
           </button>

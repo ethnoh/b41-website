@@ -68,7 +68,7 @@ export default function Navbar() {
             <button
               onClick={() => scrollTo("#contact")}
               className="hidden lg:flex items-center px-5 py-2.5 rounded-full text-sm font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-md"
-              style={{ boxShadow: "0 4px 12px rgba(160,82,45,0.3)" }}
+              style={{ boxShadow: "0 4px 12px rgba(15,52,96,0.3)" }}
             >
               Start Project
             </button>

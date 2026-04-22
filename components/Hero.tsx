@@ -28,15 +28,15 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden>
         <div
           className="blob absolute -top-48 -right-32 w-[520px] h-[520px] rounded-full opacity-[0.15]"
-          style={{ background: "radial-gradient(circle, #a0522d, transparent 65%)" }}
+          style={{ background: "radial-gradient(circle, #0f3460, transparent 65%)" }}
         />
         <div
           className="blob blob-delay-2 absolute top-1/2 -left-48 w-[400px] h-[400px] rounded-full opacity-[0.10]"
-          style={{ background: "radial-gradient(circle, #cd5c5c, transparent 65%)" }}
+          style={{ background: "radial-gradient(circle, #1a5276, transparent 65%)" }}
         />
         <div
           className="blob blob-delay-4 absolute bottom-16 right-1/3 w-[320px] h-[320px] rounded-full opacity-[0.08]"
-          style={{ background: "radial-gradient(circle, #8b4513, transparent 65%)" }}
+          style={{ background: "radial-gradient(circle, #0d2e4a, transparent 65%)" }}
         />
       </div>
 
@@ -68,7 +68,7 @@ export default function Hero() {
             className="w-2 h-2 rounded-full animate-pulse"
             style={{ background: "var(--accent-primary)" }}
           />
-          <span className="text-sm font-medium" style={{ color: "#7B3F00" }}>
+          <span className="text-sm font-medium" style={{ color: "#0D2E4A" }}>
             AI-Powered Logistics Automation
           </span>
         </motion.div>
@@ -105,7 +105,7 @@ export default function Hero() {
           <button
             onClick={() => setModalOpen(true)}
             className="px-8 py-4 rounded-full text-base font-semibold text-white gradient-bg hover:opacity-90 transition-all hover:scale-[1.03] active:scale-[0.98]"
-            style={{ boxShadow: "0 8px 24px rgba(160,82,45,0.35)" }}
+            style={{ boxShadow: "0 8px 24px rgba(15,52,96,0.35)" }}
           >
             Start Your AI Project
           </button>

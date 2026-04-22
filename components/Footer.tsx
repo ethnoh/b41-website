@@ -41,7 +41,7 @@ export default function Footer() {
             <a
               href="mailto:sales@b41.ai"
               className="text-sm font-medium transition-colors"
-              style={{ color: "#cd853f" }}
+              style={{ color: "#1e6b9e" }}
             >
               sales@b41.ai
             </a>

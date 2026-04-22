@@ -11,7 +11,7 @@ const testimonials = [
     title: "Sales & Marketing Director",
     company: "Speed-IT Limited",
     initials: "FC",
-    gradient: "from-[#CD5C5C] to-[#A0522D]",
+    gradient: "from-[#1A5276] to-[#0F3460]",
   },
   {
     quote:
@@ -20,7 +20,7 @@ const testimonials = [
     title: "Head of Operations",
     company: "Conway Container Solutions",
     initials: "OM",
-    gradient: "from-[#A0522D] to-[#8B4513]",
+    gradient: "from-[#0F3460] to-[#0D2E4A]",
   },
   {
     quote:
@@ -29,7 +29,7 @@ const testimonials = [
     title: "Director of Logistics",
     company: "Latflex",
     initials: "LD",
-    gradient: "from-[#8B4513] to-[#5C3D2E]",
+    gradient: "from-[#0D2E4A] to-[#0B1F2D]",
   },
   {
     quote:
@@ -38,7 +38,7 @@ const testimonials = [
     title: "Senior Operations Manager",
     company: "Speed-IT Limited",
     initials: "SM",
-    gradient: "from-[#CD853F] to-[#A0522D]",
+    gradient: "from-[#1E6B9E] to-[#0F3460]",
   },
 ];
 
@@ -115,14 +115,14 @@ export default function Testimonials() {
                     style={{
                       width: CARD_WIDTH,
                       maxWidth: "calc(100vw - 3rem)",
-                      border: "1px solid rgba(160,82,45,0.18)",
-                      boxShadow: "0 4px 24px rgba(160,82,45,0.10)",
+                      border: "1px solid rgba(15,52,96,0.18)",
+                      boxShadow: "0 4px 24px rgba(15,52,96,0.10)",
                     }}
                   >
                     {/* Stars */}
                     <div className="flex gap-1" aria-label="5 stars">
                       {Array.from({ length: 5 }).map((_, s) => (
-                        <span key={s} style={{ color: "#CD853F" }}>★</span>
+                        <span key={s} style={{ color: "#1E6B9E" }}>★</span>
                       ))}
                     </div>
 

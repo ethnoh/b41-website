@@ -4,16 +4,16 @@
 :root {
   --bg-primary: #fafaf8;
   --bg-alt: #f5f4f0;
-  --bg-dark: #5c3d2e;           /* Dark brown for contrast sections */
+  --bg-dark: #0b1f2d;           /* Dark blue for contrast sections */
   --text-primary: #1a1a1a;
   --text-secondary: #666666;
   --text-light: #999999;
 
-  /* Rust / brick-red palette */
-  --accent-primary: #a0522d;    /* Rust-brown – main accent */
-  --accent-secondary: #cd5c5c;  /* Indian red – hover states */
-  --accent-light: #fdf0e8;      /* Very light rust tint */
-  --accent-border: #e8c8a8;     /* Warm border colour */
+  /* Deep blue palette */
+  --accent-primary: #0f3460;    /* Deep blue – main accent */
+  --accent-secondary: #1a5276;  /* Deeper blue – hover states */
+  --accent-light: #ebf5fb;      /* Very light blue tint */
+  --accent-border: #aed6f1;     /* Light blue border colour */
 
   --card-bg: #ffffff;
   --card-border: #e5e5e0;
@@ -58,14 +58,14 @@ h2 {
 
 /* ─── Gradient Utilities ─────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #a0522d 0%, #cd5c5c 100%);
+  background: linear-gradient(135deg, #0f3460 0%, #1a5276 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, #a0522d 0%, #cd5c5c 100%);
+  background: linear-gradient(135deg, #0f3460 0%, #1a5276 100%);
 }
 
 /* ─── Blob Animations ────────────────────────────────────────── */
