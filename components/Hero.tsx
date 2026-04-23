@@ -24,6 +24,19 @@ export default function Hero() {
       style={{ background: "var(--bg-primary)" }}
       aria-label="Hero"
     >
+      {/* Hero background image at 50% opacity */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/images/hero/hero_background.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          opacity: 0.5,
+        }}
+        aria-hidden
+      />
+
       {/* Animated gradient blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden>
         <div
