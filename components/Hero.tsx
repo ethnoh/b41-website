@@ -24,15 +24,15 @@ export default function Hero() {
       style={{ background: "var(--bg-primary)" }}
       aria-label="Hero"
     >
-      {/* Hero background image at 50% opacity */}
+      {/* Hero background image at 30% opacity */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "url('/images/hero/hero_background.png')",
-          backgroundSize: "cover",
+          backgroundImage: "url('/images/hero/hero_background_2.png')",
+          backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 0.5,
+          opacity: 0.3,
         }}
         aria-hidden
       />
