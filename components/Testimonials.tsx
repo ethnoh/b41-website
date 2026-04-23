@@ -111,12 +111,13 @@ export default function Testimonials() {
                     animate={{ opacity: offset === 1 ? 0.55 : 1, x: 0, scale: offset === 1 ? 0.97 : 1 }}
                     exit={{ opacity: 0, x: -60, scale: 0.96 }}
                     transition={{ duration: 0.45, ease: "easeOut" }}
-                    className={`bg-white rounded-2xl p-8 flex-shrink-0 ${offset === 1 ? "hidden lg:flex" : "flex"} flex-col gap-6`}
+                    className={`rounded-2xl p-8 flex-shrink-0 ${offset === 1 ? "hidden lg:flex" : "flex"} flex-col gap-6`}
                     style={{
                       width: CARD_WIDTH,
                       maxWidth: "calc(100vw - 3rem)",
-                      border: "1px solid rgba(0,0,0,0.10)",
-                      boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                      background: "#1a1a1a",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      boxShadow: "0 4px 24px rgba(0,0,0,0.35)",
                     }}
                   >
                     {/* Stars */}
@@ -127,20 +128,20 @@ export default function Testimonials() {
                     </div>
 
                     {/* Quote */}
-                    <blockquote className="text-gray-700 leading-relaxed text-[15px] flex-1">
+                    <blockquote className="leading-relaxed text-[15px] flex-1" style={{ color: "#ffffff" }}>
                       &ldquo;{card.quote}&rdquo;
                     </blockquote>
 
                     {/* Author */}
-                    <div className="flex items-center gap-3 pt-2 border-t border-gray-100">
+                    <div className="flex items-center gap-3 pt-2 border-t border-white/10">
                       <div
                         className={`w-10 h-10 rounded-full bg-gradient-to-br ${card.gradient} flex items-center justify-center text-xs font-black text-white flex-shrink-0`}
                       >
                         {card.initials}
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm">{card.name}</p>
-                        <p className="text-xs text-gray-500">
+                        <p className="font-semibold text-sm" style={{ color: "#ffffff" }}>{card.name}</p>
+                        <p className="text-xs" style={{ color: "#999999" }}>
                           {card.title} · {card.company}
                         </p>
                       </div>
