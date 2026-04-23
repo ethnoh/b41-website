@@ -105,7 +105,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="text-xl sm:text-2xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          We build AI that replaces manual work — not people.
+          We build AI that replaces manual work - not people.
         </motion.p>
 
         {/* CTAs */}
@@ -124,7 +124,7 @@ export default function Hero() {
           </button>
           <button
             onClick={() => scrollTo("#services")}
-            className="px-8 py-4 rounded-full text-base font-semibold text-gray-700 border-2 border-gray-200 hover:border-gray-300 hover:bg-white transition-all flex items-center gap-2 active:scale-[0.98]"
+            className="px-8 py-4 rounded-full text-base font-semibold text-gray-900 border-2 border-gray-700 hover:border-gray-900 hover:bg-white transition-all flex items-center gap-2 active:scale-[0.98]"
           >
             See Our Work
             <motion.span
@@ -147,7 +147,7 @@ export default function Hero() {
           {stats.map((s) => (
             <div key={s.label} className="text-center">
               <div className="text-3xl lg:text-4xl font-black gradient-text mb-1">{s.value}</div>
-              <div className="text-xs sm:text-sm text-gray-400 leading-snug">{s.label}</div>
+              <div className="text-xs sm:text-sm leading-snug" style={{ color: "#444444" }}>{s.label}</div>
             </div>
           ))}
         </motion.div>

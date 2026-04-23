@@ -122,7 +122,7 @@ export default function Testimonials() {
                     {/* Stars */}
                     <div className="flex gap-1" aria-label="5 stars">
                       {Array.from({ length: 5 }).map((_, s) => (
-                        <span key={s} style={{ color: "#636E72" }}>★</span>
+                        <span key={s} style={{ color: "#FFD700" }}>★</span>
                       ))}
                     </div>
 

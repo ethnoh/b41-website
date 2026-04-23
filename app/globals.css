@@ -75,7 +75,7 @@ h2 {
 }
 
 .blink-red {
-  animation: blink-red 1.5s ease-in-out infinite;
+  animation: blink-red 3s ease-in-out infinite;
 }
 
 /* ─── Blob Animations ────────────────────────────────────────── */
