@@ -32,7 +32,7 @@ export default function Hero() {
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 0.3,
+          opacity: 0.2,
         }}
         aria-hidden
       />
