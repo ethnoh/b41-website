@@ -78,8 +78,8 @@ export default function Hero() {
           }}
         >
           <span
-            className="w-2 h-2 rounded-full animate-pulse"
-            style={{ background: "var(--accent-primary)" }}
+            className="w-2 h-2 rounded-full blink-red"
+            style={{ background: "#e63946" }}
           />
           <span className="text-sm font-medium" style={{ color: "#1A1A1A" }}>
             AI-Powered Logistics Automation

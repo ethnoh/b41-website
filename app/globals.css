@@ -68,6 +68,16 @@ h2 {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
 }
 
+/* ─── Red Blink Animation ────────────────────────────────────── */
+@keyframes blink-red {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+.blink-red {
+  animation: blink-red 1.5s ease-in-out infinite;
+}
+
 /* ─── Blob Animations ────────────────────────────────────────── */
 @keyframes blob-float {
   0%,
