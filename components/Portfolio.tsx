@@ -112,19 +112,16 @@ export default function Portfolio() {
               className="group bg-white rounded-2xl overflow-hidden border border-gray-100 cursor-pointer w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               style={{ boxShadow: "var(--card-shadow)" }}
             >
-              {/* Gradient header */}
-              <div className={`h-44 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.15),transparent_60%)]" />
-                <div className="absolute bottom-4 left-4 flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2.5 py-1 bg-white/20 backdrop-blur-sm rounded-full text-[11px] font-semibold text-white"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              {/* Tag bar */}
+              <div className={`h-10 bg-gradient-to-br ${project.gradient} relative flex items-center px-3 gap-1.5 overflow-hidden`}>
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-0.5 bg-white/20 backdrop-blur-sm rounded-full text-[10px] font-semibold text-white whitespace-nowrap flex-shrink-0"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
 
               {/* Body */}

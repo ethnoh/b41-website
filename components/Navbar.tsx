@@ -65,14 +65,6 @@ export default function Navbar() {
 
           {/* Desktop CTA + mobile hamburger */}
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => scrollTo("#contact")}
-              className="hidden lg:flex items-center px-5 py-2.5 rounded-full text-sm font-semibold text-white gradient-bg hover:opacity-90 transition-opacity shadow-md"
-              style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.2)" }}
-            >
-              Start Project
-            </button>
-
             {/* Hamburger */}
             <button
               className="lg:hidden flex flex-col justify-center gap-[5px] w-9 h-9"
@@ -120,12 +112,6 @@ export default function Navbar() {
                   {link.label}
                 </button>
               ))}
-              <button
-                onClick={() => scrollTo("#contact")}
-                className="mt-3 px-5 py-3 rounded-full text-sm font-semibold text-white gradient-bg text-center"
-              >
-                Start Project
-              </button>
             </nav>
           </motion.div>
         )}
