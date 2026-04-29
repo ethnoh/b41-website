@@ -56,7 +56,7 @@ export default function Navbar() {
               <button
                 key={link.href}
                 onClick={() => scrollTo(link.href)}
-                className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors cursor-pointer"
+                className="text-[15px] font-medium text-gray-500 hover:text-gray-900 transition-colors cursor-pointer"
               >
                 {link.label}
               </button>
