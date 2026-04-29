@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   keywords:
     "AI automation, logistics automation, operations automation, AI systems, document automation, OCR, invoice processing, freight automation, logistics AI, supply chain automation, ERP integration, TMS automation, AI chatbot logistics, workflow automation, intelligent document processing",
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  verification: {
+    google: "HvHdVEuEApLQ-pVYNEcmA3rfh2yOquHunQUEZweNDP4",
+  },
   alternates: {
     canonical: "https://b41.ai",
   },
