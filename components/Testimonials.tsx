@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     quote:
-      "The AI assistant they built for us is something our team actually uses daily. It answers questions about our SOPs and rate cards instantly — no more digging through spreadsheets.",
+      "The AI assistant they built for us is something our team actually uses daily. It answers questions about our SOPs and rate cards instantly - no more digging through spreadsheets.",
     name: "Logistics Director",
     title: "Director of Logistics",
     company: "Latflex",

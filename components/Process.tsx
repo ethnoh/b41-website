@@ -15,14 +15,14 @@ const steps = [
     emoji: "🏗️",
     title: "Architecture",
     description:
-      "We design the AI system architecture tailored to your tech stack, data sources, and operational constraints — before writing a single line of code.",
+      "We design the AI system architecture tailored to your tech stack, data sources, and operational constraints - before writing a single line of code.",
   },
   {
     number: "03",
     emoji: "⚙️",
     title: "Build",
     description:
-      "We develop, test, and iterate with your team in tight cycles. You see real progress every week — not a big reveal at the end.",
+      "We develop, test, and iterate with your team in tight cycles. You see real progress every week - not a big reveal at the end.",
   },
   {
     number: "04",

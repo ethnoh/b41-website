@@ -137,7 +137,7 @@ export default function Services() {
             AI automation for every part of your operation
           </h2>
           <p className="text-lg text-gray-500 leading-relaxed">
-            From sales pipelines to document processing — we build the AI layer your logistics
+            From sales pipelines to document processing - we build the AI layer your logistics
             business needs to compete.
           </p>
         </motion.div>

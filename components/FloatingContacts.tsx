@@ -38,6 +38,23 @@ export default function FloatingContacts() {
       className="fixed bottom-6 right-5 z-40 flex flex-col gap-3"
       aria-label="Contact us"
     >
+      {/* Scroll to top */}
+      <motion.button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        aria-label="Back to top"
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.4, delay: 0.7, ease: "easeOut" }}
+        whileHover={{ scale: 1.15 }}
+        whileTap={{ scale: 0.95 }}
+        className="w-11 h-11 rounded-full flex items-center justify-center text-white shadow-lg transition-colors duration-200 text-lg font-bold"
+        style={{ background: "#1A1A1A", boxShadow: "0 4px 14px rgba(0,0,0,0.35)" }}
+        onMouseEnter={(e) => (e.currentTarget.style.background = "#2D3436")}
+        onMouseLeave={(e) => (e.currentTarget.style.background = "#1A1A1A")}
+      >
+        ↑
+      </motion.button>
+
       {contacts.map((c, i) => (
         <motion.a
           key={c.label}

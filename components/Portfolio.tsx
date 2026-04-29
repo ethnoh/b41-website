@@ -20,7 +20,7 @@ const projects = [
     title: "Sales Pipeline Automation",
     client: "Speed-IT",
     description:
-      "End-to-end CRM automation that qualifies leads, sends follow-up sequences, and updates records automatically — no human touch required on routine deals.",
+      "End-to-end CRM automation that qualifies leads, sends follow-up sequences, and updates records automatically - no human touch required on routine deals.",
     details:
       "Integrated with existing CRM via API. Handles lead scoring, personalised email sequences, task creation, and Slack notifications for the sales team. Deal progression improved by 3× after deployment.",
     tags: ["CRM", "Sales", "Automation"],
@@ -33,7 +33,7 @@ const projects = [
     description:
       "Private GPT-powered assistant trained on company SOPs, rate cards, and operational procedures. Teams get instant answers without searching through docs.",
     details:
-      "Deployed as an internal Slack bot and web interface. Trained on all company documentation — can generate quotes, answer operational questions, and escalate to a human when needed. Zero data leaves the client's environment.",
+      "Deployed as an internal Slack bot and web interface. Trained on all company documentation - can generate quotes, answer operational questions, and escalate to a human when needed. Zero data leaves the client's environment.",
     tags: ["AI Assistant", "LLM", "Private Deployment"],
     gradient: "from-[#2D3436] to-[#111111]",
   },
@@ -42,7 +42,7 @@ const projects = [
     title: "Document Classification Engine",
     client: "Conway Container Solutions",
     description:
-      "AI that automatically classifies, tags, and routes 14 types of incoming logistics documents to the correct department and workflow — without human review.",
+      "AI that automatically classifies, tags, and routes 14 types of incoming logistics documents to the correct department and workflow - without human review.",
     details:
       "Connected to email, a document portal, and the operations system. Trained on 3 years of historical documents. Saves 2+ hours per day in manual sorting and routing, and eliminates mis-routing errors.",
     tags: ["Classification", "AI", "Workflow"],
@@ -93,7 +93,7 @@ export default function Portfolio() {
             Real projects, real results
           </h2>
           <p className="text-lg text-gray-500 leading-relaxed">
-            Each project is built specifically for the client's workflow — not a template, not a
+            Each project is built specifically for the client's workflow - not a template, not a
             SaaS tool.
           </p>
         </motion.div>

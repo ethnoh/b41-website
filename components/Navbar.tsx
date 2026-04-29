@@ -39,10 +39,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <button onClick={() => scrollTo("#")} className="flex items-center gap-3">
+          <button onClick={() => { setMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="flex items-center gap-3">
             <Image
               src="/assets/logo.svg"
-              alt="B41 — Based on AI"
+              alt="B41 - Based on AI"
               width={48}
               height={30}
               style={{ filter: "brightness(0)" }}

@@ -13,7 +13,7 @@ const benefits = [
     number: "02",
     title: "Eliminate repetitive human errors",
     description:
-      "AI doesn't lose focus or make typos. Every document processed and every record updated — accurately, every time.",
+      "AI doesn't lose focus or make typos. Every document processed and every record updated - accurately, every time.",
   },
   {
     number: "03",
@@ -25,7 +25,7 @@ const benefits = [
     number: "04",
     title: "Scale operations without hiring more people",
     description:
-      "Handle 10× the volume with the same team. AI scales with your business — headcount doesn't have to.",
+      "Handle 10× the volume with the same team. AI scales with your business - headcount doesn't have to.",
   },
 ];
 

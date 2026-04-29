@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import CookieBanner from "@/components/CookieBanner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -43,6 +44,7 @@ export default function RootLayout({
       <body className="antialiased">
         <Navbar />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

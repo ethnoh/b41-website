@@ -73,7 +73,12 @@ export default function ContactCTA() {
           className="text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-[1.08]"
         >
           Let's automate your{" "}
-          <span className="gradient-text">logistics operations</span>
+          <span style={{
+            background: "linear-gradient(135deg, #ffffff 0%, #aaaaaa 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}>logistics operations</span>
         </motion.h2>
 
         {/* Description */}
@@ -86,7 +91,7 @@ export default function ContactCTA() {
           style={{ color: "rgba(250,250,248,0.65)" }}
         >
           Tell us about your workflow. We'll map the automation opportunities and show you exactly
-          what's possible — no commitment required.
+          what's possible - no commitment required.
         </motion.p>
 
         {/* CTAs */}
