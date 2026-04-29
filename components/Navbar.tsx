@@ -24,8 +24,11 @@ export default function Navbar() {
 
   const scrollTo = (href: string) => {
     setMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    // Delay scroll until mobile menu close animation finishes (280ms)
+    setTimeout(() => {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 300);
   };
 
   return (
