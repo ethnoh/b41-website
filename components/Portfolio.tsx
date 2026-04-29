@@ -98,8 +98,8 @@ export default function Portfolio() {
           </p>
         </motion.div>
 
-        {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid — flex-wrap so last 2 cards center on desktop */}
+        <div className="flex flex-wrap justify-center gap-6">
           {projects.map((project, i) => (
             <motion.article
               key={project.id}
@@ -109,7 +109,7 @@ export default function Portfolio() {
               viewport={{ once: true, amount: 0.15 }}
               whileHover={{ y: -6 }}
               onClick={() => setSelected(project)}
-              className="group bg-white rounded-2xl overflow-hidden border border-gray-100 cursor-pointer"
+              className="group bg-white rounded-2xl overflow-hidden border border-gray-100 cursor-pointer w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               style={{ boxShadow: "var(--card-shadow)" }}
             >
               {/* Gradient header */}

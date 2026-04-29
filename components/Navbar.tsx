@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-9 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/90 backdrop-blur-md shadow-[0_1px_20px_rgba(0,0,0,0.06)]"
           : "bg-transparent"
