@@ -19,7 +19,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "AI Solutions for Logistics | B41 — Based on AI",
+  title: "AI Solutions for Logistics Operations | B41 — Based on AI",
   description:
     "Automate logistics operations with custom AI systems. Reduce manual work by 70%, eliminate errors, and scale without hiring more people. AI automation for freight, supply chain, and document processing.",
   keywords:
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
   openGraph: {
-    title: "AI Solutions for Logistics | B41",
+    title: "AI Solutions for Logistics Operations | B41",
     description:
       "Custom AI systems that automate repetitive logistics tasks. Reduce manual work by 70% and scale your operations.",
     url: "https://b41.ai",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Solutions for Logistics | B41",
+    title: "AI Solutions for Logistics Operations | B41",
     description:
       "Automate logistics with AI. Reduce manual work by 70%, eliminate errors, scale without hiring.",
     images: ["https://b41.ai/assets/logo.svg"],

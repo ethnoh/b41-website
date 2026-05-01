@@ -95,6 +95,7 @@ export default function Hero() {
         >
           AI Solutions for{" "}
           <span className="gradient-text">Logistics</span>
+          <br className="hidden sm:block" /> Operations
         </motion.h1>
 
         {/* Subheadline */}
