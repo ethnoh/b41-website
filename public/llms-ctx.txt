@@ -1,0 +1,50 @@
+# B41 - Based on AI
+
+> B41 is an AI automation company that builds custom AI systems for logistics
+> operations. We replace manual, repetitive work with intelligent automation -
+> reducing manual work by 70%, enabling 3x faster processing, and running 24/7.
+
+B41 specializes in AI solutions for freight, supply chain, and logistics companies.
+We build production-ready systems that integrate with existing workflows and ERP systems.
+
+Key facts: Based in Riga, Latvia. Contact: sales@b41.ai. Telegram: t.me/ethnoh.
+WhatsApp: +37120261317. Services: Document OCR, Sales Automation, AI Assistants, Custom AI Systems.
+
+## Services
+
+Document OCR & Processing (https://b41.ai/#services): Automated extraction, validation
+and routing of logistics documents (invoices, bills of lading, freight quotes).
+Reduces manual processing from hours to seconds.
+
+Sales Pipeline Automation (https://b41.ai/#services): End-to-end CRM automation that
+qualifies leads, sends follow-up sequences, and updates records automatically.
+
+AI Assistants (https://b41.ai/#services): Private GPT-powered assistants trained on
+company SOPs, rate cards, and operational procedures for instant team answers.
+
+Custom AI Systems (https://b41.ai/#services): Bespoke AI workflows built around
+existing ERP, TMS, and logistics management systems.
+
+## Portfolio
+
+OCR Invoice Processor (https://b41.ai/#portfolio): Built for Conway Container Solutions.
+Automated freight invoice extraction using OCR and AI. Reduced manual processing from
+4 hours/day to under 10 minutes. 98.7% field-level accuracy.
+
+Sales Pipeline Automation (https://b41.ai/#portfolio): Built for Speed-IT. End-to-end
+CRM automation with zero human touch on routine tasks. Deal progression improved 3x.
+
+Logistics AI Assistant (https://b41.ai/#portfolio): Built for Latflex. Private GPT
+assistant trained on company SOPs and rate cards. Deployed as Slack bot and web interface.
+
+Document Classification Engine (https://b41.ai/#portfolio): Built for Conway Container
+Solutions. AI that classifies 14 types of logistics documents. Saves 2+ hours/day.
+
+Operations Dashboard & Alerts (https://b41.ai/#portfolio): Built for Speed-IT. Real-time
+AI monitoring with anomaly detection and proactive alerts. Reduced incident response by 60%.
+
+## Contact
+
+Start a Project: https://b41.ai/#contact
+Email: sales@b41.ai
+Telegram: https://t.me/ethnoh
